@@ -1,7 +1,5 @@
 @component('components.app')
-<x-header /> fahmy alex
-
-
+<x-header />
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
@@ -17,6 +15,10 @@
                             <div class="mail">
                                 <input type="email" name="mail">
                                 <label>Mail or Username</label>
+                            </div>
+                            <div class="phone">
+                                <input type="text" name="phone">
+                                <label>Phone</label>
                             </div>
                             <div class="passwd">
                                 <input type="password" name="password">
