@@ -1,5 +1,8 @@
 @component('components.app')
 <x-header /> fahmy alex
+
+<x-header />
+
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
