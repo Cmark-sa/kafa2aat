@@ -1,5 +1,6 @@
 @component('components.app')
 <x-header />
+<h1>ay betngan</h1>
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
