@@ -1,8 +1,7 @@
 @component('components.app')
 <x-header /> fahmy alex
 
-<x-header />
-Sayed
+
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
