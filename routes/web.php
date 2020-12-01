@@ -56,13 +56,15 @@ Route::put('/contacts/update/{id}' , 'ContactController@update')->name('contacts
 Route::delete('/contacts/delete/{id}' , 'ContactController@destroy')->name('contacts.destroy');
 
 //courses CRUD System
-Route::get('/courses' , 'CourseController@index')->name('courses.index');
-Route::get('/courses/create' , 'CourseController@create')->name('courses.create');
-Route::post('/courses/store' , 'CourseController@store')->name('courses.store');
-Route::get('/courses/edit/{id}' , 'CourseController@edit')->name('courses.edit');
-Route::put('/courses/update/{id}' , 'CourseController@update')->name('courses.update');
-Route::delete('/courses/delete/{id}' , 'CourseController@destroy')->name('courses.destroy');
+Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
 
+    Route::get('/courses', 'CourseController@index')->name('courses.index');
+    Route::get('/courses/create', 'CourseController@create')->name('courses.create');
+    Route::post('/courses/store', 'CourseController@store')->name('courses.store');
+    Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
+    Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
+    Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
+});
 //HeadQuartersCourse CRUD System
 Route::get('/headquarterCourse' , 'HeadQuartersCourseController@index')->name('headquarterCourse.index');
 Route::get('/headquarterCourse/create' , 'HeadQuartersCourseController@create')->name('headquarterCourse.create');
@@ -79,4 +81,11 @@ Route::get('/onlineCourse/edit/{id}' , 'OnlineCoursesController@edit')->name('on
 Route::put('/onlineCourse/update/{id}' , 'OnlineCoursesController@update')->name('onlineCourse.update');
 Route::delete('/onlineCourse/delete/{id}' , 'OnlineCoursesController@destroy')->name('onlineCourse.destroy');
 
+
+// Courses Routes - (USER ROUTES)
+Route::group(['namespace' => 'user'] , function (){
+    Route::get('courses' , 'CourseController@courses');
+    Route::get('course-details/{course_id}' , 'CourseController@courseDetails');
+
+});
 // });

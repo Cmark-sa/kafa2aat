@@ -1,18 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\user;
 
 use App\Course;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    public function index(){
-        dd('Hello From CourseController :)');
-        $courses = Course::all();
-        // return view ('admin.courses.index');
-    }
-
     public function create(){
         dd('Hello From CourseController :)');
         // return view ('admin.courses.create');
