@@ -1,5 +1,11 @@
 @component('components.app')
+<<<<<<< HEAD
 <x-header /> fahmy alex
+=======
+<h1>A7la msa</h1>
+<x-header />
+<x-header />
+>>>>>>> 0ecb46e5dbfc623408ba8cd1fa1c04bd20beb7b1
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
