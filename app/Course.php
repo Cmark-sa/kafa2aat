@@ -19,10 +19,10 @@ class Course extends Model
     ];
 
     public function headquartersCourses(){
-        return $this->hasMany('App\HeadQuartersCourse' , 'course_id' , 'id');
+        return $this->hasOne('App\HeadQuartersCourse' , 'course_id' , 'id');
     }
 
-    public function onlineCourses(){
-        return $this->hasMany('App\OnlineCourses' , 'course_id' , 'id');
+    public function onlineCourse(){
+        return $this->hasOne('App\OnlineCourses' , 'course_id' , 'id');
     }
 }
