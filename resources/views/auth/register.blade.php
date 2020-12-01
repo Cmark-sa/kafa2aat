@@ -8,10 +8,19 @@
                     <div class="wrapper wrapper2">
                         <form id="Register" method="POST" action="{{ route('register') }}" class="card-body" tabindex="500">
                            @csrf 
+                           @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                             <h3>Register</h3>
-                            <div class="name">
-                                <input type="text" name="name">
-                                <label>Name</label>
+                            <div class="username">
+                                <input type="text" name="username">
+                                <label>Username</label>
                             </div>
                             <div class="email">
                                 <input type="email" name="email">
