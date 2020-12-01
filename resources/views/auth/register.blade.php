@@ -1,5 +1,6 @@
 @component('components.app')
 <x-header />
+zero web school
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
