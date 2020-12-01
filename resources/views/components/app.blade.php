@@ -58,8 +58,11 @@
 {{--<div id="global-loader">--}}
 {{--    <img src="../assets/images/loader.svg" class="loader-img" alt="img">--}}
 {{--</div><!--/Loader-->--}}
+<div  class="content_wrapper">
 
-{{$slot}}
+    {{$slot}}
+
+</div>
 
 
 <x-footer />
