@@ -14,6 +14,8 @@ class CourseController extends Controller
     }
 
     public function courseDetails($course_id){
+          $course = Course::findOrFail($course_id);
+        
          return view('user.courses.course-details')->with('course' ,Course::find($course_id));
     }
 
