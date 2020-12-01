@@ -1,7 +1,6 @@
 @component('components.app')
 <x-header />
 
-
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
