@@ -82,7 +82,7 @@
                                     </li>
                                 </ul>
                             </div>
-                       
+
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-sm-8 col-5">
@@ -127,7 +127,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-12">
                         <div class="header-search-logo d-none d-lg-block">
-                            <a class="header-logo" href="index.html">
+                            <a class="header-logo" href="{{url('/')}}">
                                 <img src="../assets/images/brand/logo1.png" class="header-brand-img" alt=" logo">
                                 <img src="../assets/images/brand/logo.png" class="header-brand-img header-white" alt="logo">
                             </a>

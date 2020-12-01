@@ -1,5 +1,5 @@
 @component('components.app')
-<x-header />
+<x-header /> XCCXV
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
