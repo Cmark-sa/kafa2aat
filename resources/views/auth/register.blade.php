@@ -1,4 +1,4 @@
-@component('layouts.app')
+@component('components.main-header')
 
 <div class="container">
     <div class="row justify-content-center">
