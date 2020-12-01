@@ -21,7 +21,16 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-// Route::prefix('admin')->group(function () {
+Route::get('/logout' , function(){
+    Auth::guard('web')->logout();
+    return redirect('/login');
+})->name('user.logout');
+
+Route::get('/courses' , function(){
+    return view ('courses.course-list');
+});
+
+Route::prefix('admin')->group(function () {
 
 //Achievements CRUD System
 Route::get('/achievements' , 'AchievementController@index')->name('achievements.index');
@@ -79,4 +88,4 @@ Route::get('/onlineCourse/edit/{id}' , 'OnlineCoursesController@edit')->name('on
 Route::put('/onlineCourse/update/{id}' , 'OnlineCoursesController@update')->name('onlineCourse.update');
 Route::delete('/onlineCourse/delete/{id}' , 'OnlineCoursesController@destroy')->name('onlineCourse.destroy');
 
-// });
+});

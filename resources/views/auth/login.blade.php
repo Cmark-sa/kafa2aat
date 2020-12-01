@@ -6,10 +6,11 @@
             <div class="single-page" >
                 <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
                     <div class="wrapper wrapper2">
-                        <form id="login" class="card-body" tabindex="500">
+                        <form id="login" method="POST" action="{{ route('login') }}" class="card-body" tabindex="500">
+                           @csrf 
                             <h3>Login</h3>
                             <div class="mail">
-                                <input type="email" name="mail">
+                                <input type="email" name="email">
                                 <label>Mail or Username</label>
                             </div>
                             <div class="passwd">
@@ -17,10 +18,10 @@
                                 <label>Password</label>
                             </div>
                             <div class="submit">
-                                <a class="btn btn-primary btn-block" href="index.html">Login</a>
+                                <button class="btn btn-primary btn-block" type="submit">Login</button>
                             </div>
                             <p class="mb-2"><a href="forgot.html" >Forgot Password</a></p>
-                            <p class="text-dark mb-0">Don't have account?<a href="register.html" class="text-primary ml-1">Sign UP</a></p>
+                            <p class="text-dark mb-0">Don't have account?<a href="{{route('register')}}" class="text-primary ml-1">Sign UP</a></p>
                         </form>
                         <hr class="divider">
                         <div class="card-body">

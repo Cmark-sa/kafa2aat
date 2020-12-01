@@ -212,6 +212,15 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-sm-8 col-5">
+                        @auth
+                        <div class="top-bar-right">
+                            <ul class="custom">
+                                <li>
+                                    <a href="/logout">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        @else
                         <div class="top-bar-right">
                             <ul class="custom">
                                 <li>
@@ -220,28 +229,9 @@
                                 <li>
                                     <a href="{{route('login')}}" class="text-dark"><i class="fa fa-sign-in mr-1"></i> <span>Login</span></a>
                                 </li>
-                                <li class="dropdown">
-                                    <a href="#" class="text-dark" data-toggle="dropdown"><i class="fa fa-home mr-1"></i><span> My Dashboard<i class="fa fa-caret-down text-white ml-1"></i></span></a>
-                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                        <a href="mydash.html" class="dropdown-item" >
-                                            <i class="dropdown-icon icon icon-user"></i> My Profile
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <i class="dropdown-icon icon icon-speech"></i> Inbox
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <i class="dropdown-icon icon icon-bell"></i> Notifications
-                                        </a>
-                                        <a href="mydash.html" class="dropdown-item" >
-                                            <i class="dropdown-icon  icon icon-settings"></i> Account Settings
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <i class="dropdown-icon icon icon-power"></i> Log out
-                                        </a>
-                                    </div>
-                                </li>
                             </ul>
                         </div>
+                        @endauth
                     </div>
                 </div>
             </div>
@@ -330,7 +320,7 @@
                                             </ul>
                                             <ul class="col link-list">
                                                 <li class="title">Other pages</li>
-                                                <li><a href="ad-list.html">Course Listing</a></li>
+                                                <li><a href="/courses">Course Listing</a></li>
                                                 <li><a href="ad-list-right.html">Course Listing Right</a></li>
                                                 <li><a href="ad-details.html">Course Details</a></li>
                                                 <li><a href="ad-details-right.html">Course Details Right</a></li>
