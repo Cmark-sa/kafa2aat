@@ -58,7 +58,7 @@
 {{--<div id="global-loader">--}}
 {{--    <img src="../assets/images/loader.svg" class="loader-img" alt="img">--}}
 {{--</div><!--/Loader-->--}}
-<div class="banner-1 cover-image  bg-background2" data-image-src="../assets/images/banners/banner1.jpg">
+<div class="cover-image bg-background3" data-image-src="../assets/images/banners/banner2.jpg">
     <!--Topbar-->
     <div class="header-main">
         <div class="top-bar">
@@ -82,192 +82,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            {{--                            <div class="clearfix">--}}
-                            {{--                                <ul class="contact">--}}
-                            {{--                                    <li class="mr-5 d-lg-none">--}}
-                            {{--                                        <a href="#" class="callnumber text-dark"><span><i class="fa fa-phone mr-1"></i>: +425 345 8765</span></a>--}}
-                            {{--                                    </li>--}}
-                            {{--                                    <li class="select-country mr-5">--}}
-                            {{--                                        <select class="form-control select2-flag-search" data-placeholder="Select Country">--}}
-                            {{--                                            <option value="UM">United States of America</option>--}}
-                            {{--                                            <option value="AF">Afghanistan</option>--}}
-                            {{--                                            <option value="AL">Albania</option>--}}
-                            {{--                                            <option value="AD">Andorra</option>--}}
-                            {{--                                            <option value="AG">Antigua and Barbuda</option>--}}
-                            {{--                                            <option value="AU">Australia</option>--}}
-                            {{--                                            <option value="AM">Armenia</option>--}}
-                            {{--                                            <option value="AO">Angola</option>--}}
-                            {{--                                            <option value="AR">Argentina</option>--}}
-                            {{--                                            <option value="AT">Austria</option>--}}
-                            {{--                                            <option value="AZ">Azerbaijan</option>--}}
-                            {{--                                            <option value="BA">Bosnia and Herzegovina</option>--}}
-                            {{--                                            <option value="BB">Barbados</option>--}}
-                            {{--                                            <option value="BD">Bangladesh</option>--}}
-                            {{--                                            <option value="BE">Belgium</option>--}}
-                            {{--                                            <option value="BF">Burkina Faso</option>--}}
-                            {{--                                            <option value="BG">Bulgaria</option>--}}
-                            {{--                                            <option value="BH">Bahrain</option>--}}
-                            {{--                                            <option value="BJ">Benin</option>--}}
-                            {{--                                            <option value="BN">Brunei</option>--}}
-                            {{--                                            <option value="BO">Bolivia</option>--}}
-                            {{--                                            <option value="BT">Bhutan</option>--}}
-                            {{--                                            <option value="BY">Belarus</option>--}}
-                            {{--                                            <option value="CD">Congo</option>--}}
-                            {{--                                            <option value="CA">Canada</option>--}}
-                            {{--                                            <option value="CF">Central African Republic</option>--}}
-                            {{--                                            <option value="CI">Cote d'Ivoire</option>--}}
-                            {{--                                            <option value="CL">Chile</option>--}}
-                            {{--                                            <option value="CM">Cameroon</option>--}}
-                            {{--                                            <option value="CN">China</option>--}}
-                            {{--                                            <option value="CO">Colombia</option>--}}
-                            {{--                                            <option value="CU">Cuba</option>--}}
-                            {{--                                            <option value="CV">Cabo Verde</option>--}}
-                            {{--                                            <option value="CY">Cyprus</option>--}}
-                            {{--                                            <option value="DJ">Djibouti</option>--}}
-                            {{--                                            <option value="DK">Denmark</option>--}}
-                            {{--                                            <option value="DM">Dominica</option>--}}
-                            {{--                                            <option value="DO">Dominican Republic</option>--}}
-                            {{--                                            <option value="EC">Ecuador</option>--}}
-                            {{--                                            <option value="EE">Estonia</option>--}}
-                            {{--                                            <option value="ER">Eritrea</option>--}}
-                            {{--                                            <option value="ET">Ethiopia</option>--}}
-                            {{--                                            <option value="FI">Finland</option>--}}
-                            {{--                                            <option value="FJ">Fiji</option>--}}
-                            {{--                                            <option value="FR">France</option>--}}
-                            {{--                                            <option value="GA">Gabon</option>--}}
-                            {{--                                            <option value="GD">Grenada</option>--}}
-                            {{--                                            <option value="GE">Georgia</option>--}}
-                            {{--                                            <option value="GH">Ghana</option>--}}
-                            {{--                                            <option value="GH">Ghana</option>--}}
-                            {{--                                            <option value="HN">Honduras</option>--}}
-                            {{--                                            <option value="HT">Haiti</option>--}}
-                            {{--                                            <option value="HU">Hungary</option>--}}
-                            {{--                                            <option value="ID">Indonesia</option>--}}
-                            {{--                                            <option value="IE">Ireland</option>--}}
-                            {{--                                            <option value="IL">Israel</option>--}}
-                            {{--                                            <option value="IN">India</option>--}}
-                            {{--                                            <option value="IQ">Iraq</option>--}}
-                            {{--                                            <option value="IR">Iran</option>--}}
-                            {{--                                            <option value="IS">Iceland</option>--}}
-                            {{--                                            <option value="IT">Italy</option>--}}
-                            {{--                                            <option value="JM">Jamaica</option>--}}
-                            {{--                                            <option value="JO">Jordan</option>--}}
-                            {{--                                            <option value="JP">Japan</option>--}}
-                            {{--                                            <option value="KE">Kenya</option>--}}
-                            {{--                                            <option value="KG">Kyrgyzstan</option>--}}
-                            {{--                                            <option value="KI">Kiribati</option>--}}
-                            {{--                                            <option value="KW">Kuwait</option>--}}
-                            {{--                                            <option value="KZ">Kazakhstan</option>--}}
-                            {{--                                            <option value="LA">Laos</option>--}}
-                            {{--                                            <option value="LB">Lebanons</option>--}}
-                            {{--                                            <option value="LI">Liechtenstein</option>--}}
-                            {{--                                            <option value="LR">Liberia</option>--}}
-                            {{--                                            <option value="LS">Lesotho</option>--}}
-                            {{--                                            <option value="LT">Lithuania</option>--}}
-                            {{--                                            <option value="LU">Luxembourg</option>--}}
-                            {{--                                            <option value="LV">Latvia</option>--}}
-                            {{--                                            <option value="LY">Libya</option>--}}
-                            {{--                                            <option value="MA">Morocco</option>--}}
-                            {{--                                            <option value="MC">Monaco</option>--}}
-                            {{--                                            <option value="MD">Moldova</option>--}}
-                            {{--                                            <option value="ME">Montenegro</option>--}}
-                            {{--                                            <option value="MG">Madagascar</option>--}}
-                            {{--                                            <option value="MH">Marshall Islands</option>--}}
-                            {{--                                            <option value="MK">Macedonia (FYROM)</option>--}}
-                            {{--                                            <option value="ML">Mali</option>--}}
-                            {{--                                            <option value="MM">Myanmar (formerly Burma)</option>--}}
-                            {{--                                            <option value="MN">Mongolia</option>--}}
-                            {{--                                            <option value="MR">Mauritania</option>--}}
-                            {{--                                            <option value="MT">Malta</option>--}}
-                            {{--                                            <option value="MV">Maldives</option>--}}
-                            {{--                                            <option value="MW">Malawi</option>--}}
-                            {{--                                            <option value="MX">Mexico</option>--}}
-                            {{--                                            <option value="MZ">Mozambique</option>--}}
-                            {{--                                            <option value="NA">Namibia</option>--}}
-                            {{--                                            <option value="NG">Nigeria</option>--}}
-                            {{--                                            <option value="NO">Norway</option>--}}
-                            {{--                                            <option value="NP">Nepal</option>--}}
-                            {{--                                            <option value="NR">Nauru</option>--}}
-                            {{--                                            <option value="NZ">Online Zealand</option>--}}
-                            {{--                                            <option value="OM">Oman</option>--}}
-                            {{--                                            <option value="PA">Panama</option>--}}
-                            {{--                                            <option value="PF">Paraguay</option>--}}
-                            {{--                                            <option value="PG">Papua Online Guinea</option>--}}
-                            {{--                                            <option value="PH">Philippines</option>--}}
-                            {{--                                            <option value="PK">Pakistan</option>--}}
-                            {{--                                            <option value="PL">Poland</option>--}}
-                            {{--                                            <option value="QA">Qatar</option>--}}
-                            {{--                                            <option value="RO">Romania</option>--}}
-                            {{--                                            <option value="RU">Russia</option>--}}
-                            {{--                                            <option value="RW">Rwanda</option>--}}
-                            {{--                                            <option value="SA">Saudi Arabia</option>--}}
-                            {{--                                            <option value="SB">Solomon Islands</option>--}}
-                            {{--                                            <option value="SC">Seychelles</option>--}}
-                            {{--                                            <option value="SD">Sudan</option>--}}
-                            {{--                                            <option value="SE">Sweden</option>--}}
-                            {{--                                            <option value="SG">Singapore</option>--}}
-                            {{--                                            <option value="TG">Togo</option>--}}
-                            {{--                                            <option value="TH">Thailand</option>--}}
-                            {{--                                            <option value="TJ">Tajikistan</option>--}}
-                            {{--                                            <option value="TL">Timor-Leste</option>--}}
-                            {{--                                            <option value="TM">Turkmenistan</option>--}}
-                            {{--                                            <option value="TN">Tunisia</option>--}}
-                            {{--                                            <option value="TO">Tonga</option>--}}
-                            {{--                                            <option value="TR">Turkey</option>--}}
-                            {{--                                            <option value="TT">Trinidad and Tobago</option>--}}
-                            {{--                                            <option value="TW">Taiwan</option>--}}
-                            {{--                                            <option value="UA">Ukraine</option>--}}
-                            {{--                                            <option value="UG">Uganda</option>--}}
-                            {{--                                            <option value="UY">Uruguay</option>--}}
-                            {{--                                            <option value="UZ">Uzbekistan</option>--}}
-                            {{--                                            <option value="VA">Vatican City (Holy See)</option>--}}
-                            {{--                                            <option value="VE">Venezuela</option>--}}
-                            {{--                                            <option value="VN">Vietnam</option>--}}
-                            {{--                                            <option value="VU">Vanuatu</option>--}}
-                            {{--                                            <option value="YE">Yemen</option>--}}
-                            {{--                                            <option value="ZM">Zambia</option>--}}
-                            {{--                                            <option value="ZW">Zimbabwe</option>--}}
-                            {{--                                        </select>--}}
-                            {{--                                    </li>--}}
-                            {{--                                    <li class="dropdown mr-5">--}}
-                            {{--                                        <a href="#" class="text-dark" data-toggle="dropdown"><span> Language <i class="fa fa-caret-down text-muted"></i></span> </a>--}}
-                            {{--                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">--}}
-                            {{--                                            <a href="#" class="dropdown-item" >--}}
-                            {{--                                                English--}}
-                            {{--                                            </a>--}}
-                            {{--                                            <a class="dropdown-item" href="#">--}}
-                            {{--                                                Arabic--}}
-                            {{--                                            </a>--}}
-                            {{--                                            <a class="dropdown-item" href="#">--}}
-                            {{--                                                German--}}
-                            {{--                                            </a>--}}
-                            {{--                                            <a href="#" class="dropdown-item" >--}}
-                            {{--                                                Greek--}}
-                            {{--                                            </a>--}}
-                            {{--                                            <a href="#" class="dropdown-item" >--}}
-                            {{--                                                Spanish--}}
-                            {{--                                            </a>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </li>--}}
-                            {{--                                    <li class="dropdown">--}}
-                            {{--                                        <a href="#" class="text-dark" data-toggle="dropdown"><span>Currency <i class="fa fa-caret-down text-muted"></i></span></a>--}}
-                            {{--                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">--}}
-                            {{--                                            <a href="#" class="dropdown-item" >--}}
-                            {{--                                                USD--}}
-                            {{--                                            </a>--}}
-                            {{--                                            <a class="dropdown-item" href="#">--}}
-                            {{--                                                EUR--}}
-                            {{--                                            </a>--}}
-                            {{--                                            <a class="dropdown-item" href="#">--}}
-                            {{--                                                INR--}}
-                            {{--                                            </a>--}}
-                            {{--                                            <a href="#" class="dropdown-item" >--}}
-                            {{--                                                GBP--}}
-                            {{--                                            </a>--}}
-                            {{--                                        </div>--}}
-                            {{--                                    </li>--}}
-                            {{--                                </ul>--}}
-                            {{--                            </div>--}}
+                       
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-sm-8 col-5">
@@ -312,31 +127,32 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-12">
                         <div class="header-search-logo d-none d-lg-block">
-                            <a class="header-logo" href="{{url('/')}}">
-                                <h3 class="header-brand-img" style="color: aliceblue">Kafa2aat</h3>
+                            <a class="header-logo" href="index.html">
+                                <img src="../assets/images/brand/logo1.png" class="header-brand-img" alt=" logo">
                                 <img src="../assets/images/brand/logo.png" class="header-brand-img header-white" alt="logo">
                             </a>
                         </div>
                     </div>
-                    {{--                    <div class="col-lg-4 col-md-12">--}}
-                    {{--                        <div class="header-icons float-right">--}}
-                    {{--                            <ul class="header-icons-link">--}}
-                    {{--                                <li class="">--}}
-                    {{--                                    <a href="#" class="header-icons-link1"><i class="fa fa-cog"></i></a>--}}
-                    {{--                                </li>--}}
-                    {{--                                <li class="">--}}
-                    {{--                                    <a href="#" class="header-icons-link1"><i class="fa fa-user"></i></a>--}}
-                    {{--                                </li>--}}
-                    {{--                                <li class="">--}}
-                    {{--                                    <a href="#" class="header-icons-link1"><i class="fa fa-cart-plus"></i>--}}
-                    {{--                                        <span class="main-badge1 badge badge-danger badge-pill">3</span></a>--}}
-                    {{--                                </li>--}}
-                    {{--                            </ul>--}}
-                    {{--                        </div>--}}
-                    {{--                    </div>--}}
+                    <div class="col-lg-4 col-md-12">
+                        <div class="header-icons float-right">
+                            <ul class="header-icons-link">
+                                <li class="">
+                                    <a href="#" class="header-icons-link1"><i class="fa fa-cog"></i></a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="header-icons-link1"><i class="fa fa-user"></i></a>
+                                </li>
+                                <li class="">
+                                    <a href="#" class="header-icons-link1"><i class="fa fa-cart-plus"></i>
+                                        <span class="main-badge1 badge badge-danger badge-pill">3</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header><!--/Header-->
+
 
         <!-- Mobile Header -->
         <div class="sticky">
@@ -486,6 +302,21 @@
         </div>
     </div><!--/Horizontal-main -->
 
-
-</div><!--/Section-->
-
+    <!--Section-->
+    <section>
+        <div class="bannerimg">
+            <div class="header-text mb-0">
+                <div class="container">
+                    <div class="text-center text-white">
+                        <h1 class="">Login</h1>
+                        <ol class="breadcrumb text-center">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Login</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/Section-->
+</div>
