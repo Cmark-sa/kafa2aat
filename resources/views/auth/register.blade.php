@@ -1,4 +1,5 @@
 @component('components.app')
+<h1>A7la msa</h1>
 <x-header />
 <section class="sptb">
     <div class="container customerpage">
