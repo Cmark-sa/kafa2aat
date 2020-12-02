@@ -288,9 +288,29 @@
                         <li aria-haspopup="true"><a href="#">Home</a>
 
                         </li>
+                        <li aria-haspopup="true"><a href="#">Services <span class="fe fe-chevron-down"></span> </a>
+                            <ul class="sub-menu">
+                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Design and draw strategic plans for institutions </a></li>
+                                <li aria-haspopup="true"><a href="{{url('organizing-exhibitions-confrences')}}" class=""> Organizing exhibitions and conferences </a></li>
+                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Organizing Qualifying and specialized Courses </a></li>
+                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Organizing and supervising media campaigns </a></li>
+                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Providing studies and consultations </a></li>
+                            </ul>
+                        </li>
 
-                        <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Courses </a></li>
-                        <li aria-haspopup="true"><a href="{{url('business-areas')}}">Business Areas </a></li>
+                        <li aria-haspopup="true"><a href="#">Business Areas <span class="fe fe-chevron-down"></span> </a>
+                            <ul class="sub-menu">
+                                <li aria-haspopup="true"><a href="#">Administrative field</a></li>
+                                <li aria-haspopup="true"><a href="#">Financial field</a></li>
+                                <li aria-haspopup="true"><a href="#">Tourist field</a></li>
+                                <li aria-haspopup="true"><a href="#">Electronic field</a></li>
+                                <li aria-haspopup="true"><a href="#">Computer field</a></li>
+                                <li aria-haspopup="true"><a href="#">English field</a></li>
+                                <li aria-haspopup="true"><a href="#">Self Development field</a></li>
+                                <li aria-haspopup="true"><a href="#">Social field</a></li>
+
+                            </ul>
+                        </li>
                         <li aria-haspopup="true"><a href="{{url('achievements')}}">Achievements</a></li>
                         <li aria-haspopup="true"><a href="#">About Us </a></li>
                         <li aria-haspopup="true"><a href="{{url('contact')}}">Contact Us</a></li>
@@ -307,8 +327,8 @@
             <div class="header-text mb-0">
                 <div class="container">
                     <div class="text-center text-white mb-7">
-                        <h1 class="mb-1">Find The Best Trainers and Build Your Future</h1>
-                        <p>It is a long established fact that a reader will be distracted by the readable.</p>
+                        <h1 class="mb-1">Find The Best Courses and Build Your Future</h1>
+
                     </div>
                     <div class="row">
                         <div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
@@ -318,13 +338,19 @@
                                         <input type="text" class="form-control input-lg br-tr-md-0 br-br-md-0" id="text4" placeholder="Search Courses.....">
                                     </div>
                                     <div class="form-group  col-xl-3 col-lg-3 col-md-12 mb-0 bg-white">
-                                        <input type="text" class="form-control input-lg br-md-0" id="text5" placeholder="Enter Location">
-                                        <span><i class="fa fa-map-marker location-gps mr-1"></i></span>
+                                        <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
+                                            <optgroup label="Categories">
+                                                <option>Select Course Type</option>
+                                                 <option value="1">remotely</option>
+                                                 <option value="2">attendance</option>
+                                                 <option value="3">online</option>
+                                            </optgroup>
+                                        </select>
                                     </div>
                                     <div class="form-group col-xl-3 col-lg-3 col-md-12 select2-lg  mb-0 bg-white">
                                         <select class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
                                             <optgroup label="Categories">
-                                                <option>Select</option>
+                                                <option>Select Course Category</option>
                                                 <option value="1">IT</option>
                                                 <option value="2">Language</option>
                                                 <option value="3">Science</option>
