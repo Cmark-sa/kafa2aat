@@ -292,7 +292,7 @@
                         <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Courses </a></li>
                         <li aria-haspopup="true"><a href="{{url('business-areas')}}">Business Areas </a></li>
                         <li aria-haspopup="true"><a href="{{url('achievements')}}">Achievements</a></li>
-                        <li aria-haspopup="true"><a href="#">About Us </a></li>
+                        <li aria-haspopup="true"><a href="#about-us">About Us </a></li>
                         <li aria-haspopup="true"><a href="{{url('contact')}}">Contact Us</a></li>
                     </ul>
 

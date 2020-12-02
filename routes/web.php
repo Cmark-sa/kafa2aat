@@ -94,6 +94,6 @@ Route::group(['namespace' => 'user'] , function (){
     Route::get('business-areas' , 'BusinessAreaController@index');
     Route::get('achievements' , 'AchievementController@index');
     Route::get('contact' , 'ContactController@contact');
-    Route::post('contact' , 'ContactController@contact');
+    Route::post('contact' , 'ContactController@storeContact')->name('userContact');
 });
 // });
