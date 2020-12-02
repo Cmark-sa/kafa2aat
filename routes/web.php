@@ -57,16 +57,20 @@ Route::put('/contacts/update/{id}' , 'ContactController@update')->name('contacts
 Route::delete('/contacts/delete/{id}' , 'ContactController@destroy')->name('contacts.destroy');
 
 //courses CRUD System
-
-//  Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
-
     Route::get('/courses', 'CourseController@index')->name('courses.index');
     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
     Route::post('/courses/store', 'CourseController@store')->name('courses.store');
     Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
     Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
     Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
-// });
+
+//services CRUD System
+    Route::get('/services', 'ServiceController@index')->name('services.index');
+    Route::get('/services/create', 'ServiceController@create')->name('services.create');
+    Route::post('/services/store', 'ServiceController@store')->name('services.store');
+    Route::get('/services/edit/{id}', 'ServiceController@edit')->name('services.edit');
+    Route::put('/services/update/{id}', 'ServiceController@update')->name('services.update');
+    Route::delete('/services/delete/{id}', 'ServiceController@destroy')->name('services.destroy');
 
 //HeadQuartersCourse CRUD System
 Route::get('/headquarterCourse' , 'HeadQuartersCourseController@index')->name('headquarterCourse.index');
@@ -95,5 +99,7 @@ Route::group(['namespace' => 'user'] , function (){
     Route::get('achievements' , 'AchievementController@index');
     Route::get('contact' , 'ContactController@contact');
     Route::post('contact' , 'ContactController@storeContact')->name('userContact');
+    Route::get('services' , 'ServiceController@services');
+    Route::get('services-details/{service_id}' , 'ServiceController@getServiceById');
 });
 // });
