@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Achievement;
 
@@ -12,7 +13,7 @@ class AchievementController extends Controller
         $achievements = Achievement::all();
         // return view ('admin.achievements.index');
     }
-    
+
     public function create(){
         dd('hello from AchievementController');
         // return view ('admin.achievements.create');

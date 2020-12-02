@@ -285,131 +285,17 @@
             <div class="horizontal-mainwrapper container clearfix">
                 <nav class="horizontalMenu clearfix d-md-flex">
                     <ul class="horizontalMenu-list">
-                        <li aria-haspopup="true"><a href="#">Home <span class="fe fe-chevron-down"></span></a>
-                            <ul class="sub-menu">
-                                <li aria-haspopup="true"><a href="index.html">Home Default</a></li>
-                                <li aria-haspopup="true"><a href="index-text.html">Home Text</a></li>
-                                <li aria-haspopup="true"><a href="index-slides.html">Home Slides</a></li>
-                                <li aria-haspopup="true"><a href="index-video.html">Home Video</a></li>
-                                <li aria-haspopup="true"><a href="index-animation.html">Home Animation</a></li>
-                                <li aria-haspopup="true"><a href="index-map.html">Home Map</a></li>
-                                <li aria-haspopup="true"><a href="index-intro-page.html">Home Intro Page</a></li>
-                                <li aria-haspopup="true"><a href="index-popup-login.html">Home Pop-up login</a></li>
-                                <li aria-haspopup="true"><a href="index-banner.html">Home Banner</a></li>
-                            </ul>
+                        <li aria-haspopup="true"><a href="#">Home</a>
+
                         </li>
-                        <li aria-haspopup="true"><a href="about.html">About Us </a></li>
-                        <li aria-haspopup="true"><a href="widgets.html">Widgets</a></li>
-                        <li aria-haspopup="true"><a href="#" class="">Pages <span class="fe fe-chevron-down"></span></a>
-                            <div class="horizontal-megamenu clearfix">
-                                <div class="container">
-                                    <div class="megamenu-content">
-                                        <div class="row">
-                                            <ul class="col link-list">
-                                                <li class="title">Other pages</li>
-                                                <li><a href="page-list.html">Page List</a></li>
-                                                <li><a href="page-list-right.html">Page List Right</a></li>
-                                                <li><a href="page-list-map.html">Page Map list</a></li>
-                                                <li><a href="page-list-map2.html">Page Map list2</a></li>
-                                                <li><a href="page-list-map3.html">Page Map style3</a></li>
-                                                <li><a href="categories.html">Categories</a></li>
-                                                <li><a href="inovice.html">Invoice</a></li>
-                                                <li><a href="usersall.html">User Lists</a></li>
-                                            </ul>
-                                            <ul class="col link-list">
-                                                <li class="title">Other pages</li>
-                                                <li><a href="/courses">Course Listing</a></li>
-                                                <li><a href="ad-list-right.html">Course Listing Right</a></li>
-                                                <li><a href="ad-details.html">Course Details</a></li>
-                                                <li><a href="ad-details-right.html">Course Details Right</a></li>
-                                                <li><a href="ad-posts.html">Course Posts</a></li>
-                                                <li><a href="ad-posts2.html">Course Posts2</a></li>
-                                                <li><a href="pricing.html">Pricing</a></li>
-                                                <li><a href="typography.html">Typography</a></li>
-                                            </ul>
-                                            <ul class="col link-list">
-                                                <li class="title">User pages</li>
-                                                <li><a href="userprofile.html"> User Profile</a></li>
-                                                <li aria-haspopup="true"><a href="profile.html">User Profile 1</a></li>
-                                                <li><a href="mydash.html">My Dashboard</a></li>
-                                                <li><a href="myads.html">Courses</a></li>
-                                                <li><a href="myfavorite.html">Favorite Courses</a></li>
-                                                <li><a href="manged.html">Manged Courses</a></li>
-                                                <li><a href="payments.html">Payments</a></li>
-                                                <li><a href="orders.html"> Orders</a></li>
-                                            </ul>
-                                            <ul class="col link-list">
-                                                <li class="title">Other Pages</li>
-                                                <li><a href="settings.html"> Settings</a></li>
-                                                <li><a href="tips.html">Tips</a></li>
-                                                <li><a href="page-details.html">Course Details</a></li>
-                                                <li><a href="page-details1.html">Course Details 1</a></li>
-                                                <li><a href="page-details-right.html">Course Details Right</a></li>
-                                                <li><a href="testimonial.html">Testimonials</a></li>
-                                                <li><a href="faq.html">Faq</a></li>
-                                            </ul>
-                                            <ul class="col link-list">
-                                                <li class="title">Headers & Footers</li>
-                                                <li><a href="header-style1.html">Header Style 01</a></li>
-                                                <li><a href="header-style2.html">Header Style 02</a></li>
-                                                <li><a href="header-style3.html">Header Style 03</a></li>
-                                                <li><a href="header-style4.html">Header Style 04</a></li>
-                                                <li><a href="footer-style.html">Footer Style 01</a></li>
-                                                <li><a href="footer-style2.html">Footer Style 02</a></li>
-                                                <li><a href="footer-style3.html">Footer Style 03</a></li>
-                                                <li><a href="footer-style4.html">Footer Style 04</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li aria-haspopup="true"><a href="#">Blog <span class="fe fe-chevron-down m-0"></span></a>
-                            <ul class="sub-menu">
-                                <li aria-haspopup="true"><a href="#">Blog Grid <i class="fa fa-angle-right float-right mt-1 d-none d-lg-block"></i></a>
-                                    <ul class="sub-menu">
-                                        <li aria-haspopup="true"><a href="blog-grid.html">Blog Grid Left</a></li>
-                                        <li aria-haspopup="true"><a href="blog-grid-right.html">Blog Grid Right</a></li>
-                                        <li aria-haspopup="true"><a href="blog-grid-center.html">Blog Grid Center</a></li>
-                                    </ul>
-                                </li>
-                                <li aria-haspopup="true"><a href="#">Blog List <i class="fa fa-angle-right float-right mt-1 d-none d-lg-block"></i></a>
-                                    <ul class="sub-menu">
-                                        <li aria-haspopup="true"><a href="blog-list.html">Blog List Left</a></li>
-                                        <li aria-haspopup="true"><a href="blog-list-right.html">Blog List Right</a></li>
-                                        <li aria-haspopup="true"><a href="blog-list-center.html">Blog List Center</a></li>
-                                    </ul>
-                                </li>
-                                <li aria-haspopup="true"><a href="#">Blog Details <i class="fa fa-angle-right float-right mt-1 d-none d-lg-block"></i></a>
-                                    <ul class="sub-menu">
-                                        <li aria-haspopup="true"><a href="blog-details.html">Blog Details Left</a></li>
-                                        <li aria-haspopup="true"><a href="blog-details-right.html">Blog Details Right</a></li>
-                                        <li aria-haspopup="true"><a href="blog-details-center.html">Blog Details Center</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li aria-haspopup="true"><a href="#">Custom Pages <span class="fe fe-chevron-down m-0"></span></a>
-                            <ul class="sub-menu">
-                                <li><a href="register.html">Register</a></li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="login-2.html">Login 02</a></li>
-                                <li><a href="forgot.html">Forgot Password</a></li>
-                                <li><a href="lockscreen.html">Lock Screen</a></li>
-                                <li><a href="underconstruction.html">Under Constructions</a></li>
-                                <li><a href="404.html">404</a></li>
-                            </ul>
-                        </li>
-                        <li aria-haspopup="true"><a href="contact.html"> Contact Us</a></li>
-                        <li aria-haspopup="true" class="d-lg-none mt-5 pb-5 mt-lg-0">
-                            <span><a class="btn btn-info" href="ad-posts.html">Register Now</a></span>
-                        </li>
+
+                        <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Courses </a></li>
+                        <li aria-haspopup="true"><a href="{{url('business-areas')}}">Business Areas </a></li>
+                        <li aria-haspopup="true"><a href="{{url('achievements')}}">Achievements</a></li>
+                        <li aria-haspopup="true"><a href="#">About Us </a></li>
+                        <li aria-haspopup="true"><a href="{{url('contact')}}">Contact Us</a></li>
                     </ul>
-                    <ul class="mb-0">
-                        <li aria-haspopup="true" class="d-none d-lg-block ">
-                            <span><a class="btn btn-primary  ad-post" href="ad-posts.html">Enroll Now</a></span>
-                        </li>
-                    </ul>
+
                 </nav>
             </div>
         </div>

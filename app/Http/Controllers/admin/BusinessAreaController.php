@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use App\BusinessArea;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class BusinessAreaController extends Controller
@@ -42,7 +43,7 @@ class BusinessAreaController extends Controller
         $business_area->image = $request->input('image');// we 'll talk about how media and image moves and put in the site
 
         $business_area->save();
-        
+
         return redirect()->route('business_area.index');
     }
 
