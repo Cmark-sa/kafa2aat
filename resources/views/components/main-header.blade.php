@@ -292,9 +292,9 @@
                             <ul class="sub-menu">
                                 <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Design and draw strategic plans for institutions </a></li>
                                 <li aria-haspopup="true"><a href="{{url('organizing-exhibitions-confrences')}}" class=""> Organizing exhibitions and conferences </a></li>
-                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Organizing Qualifying and specialized Courses </a></li>
-                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Organizing and supervising media campaigns </a></li>
-                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Providing studies and consultations </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class="">Organizing Qualifying and specialized Courses </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class="">Organizing and supervising media campaigns </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class="">Providing studies and consultations </a></li>
                             </ul>
                         </li>
 
