@@ -13,13 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/logout' , function(){
     Auth::guard('web')->logout();
@@ -62,15 +60,20 @@ Route::delete('/contacts/delete/{id}' , 'ContactController@destroy')->name('cont
 
 //courses CRUD System
 
-// Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
+ Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
 
-//     Route::get('/courses', 'CourseController@index')->name('courses.index');
-//     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
-//     Route::post('/courses/store', 'CourseController@store')->name('courses.store');
-//     Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
-//     Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
-//     Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
-// });
+     // COURSES SCOPE
+     Route::get('/courses', 'CourseController@index')->name('courses.index');
+     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
+     Route::post('/courses/store', 'CourseController@store')->name('courses.store');
+     Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
+     Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
+     Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
+
+     // SETTINGS SCOPE
+     Route::post('/settings/create', 'SettingsController@settingCreate');
+     Route::get('/settings', 'CourseController@settings');
+ });
 
 //HeadQuartersCourse CRUD System
 Route::get('/headquarterCourse' , 'HeadQuartersCourseController@index')->name('headquarterCourse.index');

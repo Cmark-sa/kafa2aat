@@ -7,7 +7,7 @@
                 <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
                     <div class="wrapper wrapper2">
                         <form id="Register" method="POST" action="{{ route('register') }}" class="card-body" tabindex="500">
-                           @csrf 
+                           @csrf
                            @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
