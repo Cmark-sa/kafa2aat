@@ -13,6 +13,9 @@ class HomeController extends Controller
     public function index()
     {
         $settings = Setting::first();
+        Session::put('sitePhone' , $settings->phone);
+        Session::put('siteAddress' , $settings->address);
+        Session::put('siteEmail' , $settings->contact_email);
         Session::put('site_nameHeader' , $settings->site_name);
         Session::put('site_descriptionHeader' , $settings->site_description);
         Session::put('facebook_linkHeader' , $settings->facebook_link);
