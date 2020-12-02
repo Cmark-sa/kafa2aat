@@ -10,16 +10,13 @@
                             <div class="clearfix">
                                 <ul class="socials">
                                     <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-facebook"></i></a>
+                                        <a class="social-icon text-dark" href="{{Session::get('facebook_linkHeader')}}"><i class="fa fa-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-twitter"></i></a>
+                                        <a class="social-icon text-dark" href="{{Session::get('twitter_linkHeader')}}"><i class="fa fa-twitter"></i></a>
                                     </li>
                                     <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-linkedin"></i></a>
-                                    </li>
-                                    <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a class="social-icon text-dark" href="{{Session::get('instagram_linkHeader')}}"><i class="fa fa-instagram"></i></a>
                                     </li>
                                 </ul>
                             </div>
@@ -245,7 +242,7 @@
                     <div class="col-lg-8 col-md-12">
                         <div class="header-search-logo d-none d-lg-block">
                             <a class="header-logo" href="{{url('/')}}">
-                    <h3 class="header-brand-img" style="color: aliceblue">Kafa2aat</h3>
+                                <h3 class="header-brand-img" style="color: aliceblue">{{Session::get('site_nameHeader')}}</h3>
                                 <img src="../assets/images/brand/logo.png" class="header-brand-img header-white" alt="logo">
                             </a>
                         </div>
