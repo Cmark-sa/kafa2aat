@@ -4,7 +4,7 @@
  <section class="sptb">
 			<div class="container">
 				<div class="text-justify">
-					<h2 class="mb-4 font-weight-semibold">Why {{}}?</h2>
+					<h2 class="mb-4 font-weight-semibold">Why Kafa2aat?</h2>
 					<h5 class="leading-normal">Majority have suffered alteration in some form, by injected humor</h5>
 					<p class="leading-normal text-muted">There are many variations of passages of Lorem Ipsum available, but the majority have suffered  by injected humour, or randomised words which don't look even slightly believable.
 					If you are going to use a passage of Lorem Ipsum, you need to as necessary All the Lorem Ipsum generators on the Internet tend to repeat</p>

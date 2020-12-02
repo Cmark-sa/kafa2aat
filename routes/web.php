@@ -13,13 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/logout' , function(){
     Auth::guard('web')->logout();
@@ -62,7 +58,7 @@ Route::delete('/contacts/delete/{id}' , 'ContactController@destroy')->name('cont
 
 //courses CRUD System
 
-// Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
+//  Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
 
     Route::get('/courses', 'CourseController@index')->name('courses.index');
     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
@@ -94,5 +90,6 @@ Route::delete('/onlineCourse/delete/{id}' , 'OnlineCoursesController@destroy')->
 Route::group(['namespace' => 'user'] , function (){
     Route::get('courses' , 'CourseController@courses');
     Route::get('course-details/{course_id}' , 'CourseController@courseDetails');
+    Route::get('/', 'HomeController@index');
 });
 // });

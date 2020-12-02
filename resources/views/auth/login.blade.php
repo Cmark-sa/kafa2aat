@@ -1,5 +1,5 @@
 @component('components.app')
-<x-header />
+<x-header   />
 <section class="sptb">
     <div class="container customerpage">
         <div class="row">
@@ -7,7 +7,7 @@
                 <div class="col-lg-5 col-xl-4 col-md-6 d-block mx-auto">
                     <div class="wrapper wrapper2">
                         <form id="login" method="POST" action="{{ route('login') }}" class="card-body" tabindex="500">
-                           @csrf 
+                           @csrf
                             <h3>Login</h3>
                             <div class="mail">
                                 <input type="email" name="email">
