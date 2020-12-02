@@ -69,16 +69,13 @@
                             <div class="clearfix">
                                 <ul class="socials">
                                     <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-facebook"></i></a>
+                                        <a class="social-icon text-dark" href="{{Session::get('facebook_linkHeader')}}"><i class="fa fa-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-twitter"></i></a>
+                                        <a class="social-icon text-dark" href="{{Session::get('twitter_linkHeader')}}"><i class="fa fa-twitter"></i></a>
                                     </li>
                                     <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-linkedin"></i></a>
-                                    </li>
-                                    <li>
-                                        <a class="social-icon text-dark" href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a class="social-icon text-dark" href="{{Session::get('instagram_linkHeader')}}"><i class="fa fa-instagram"></i></a>
                                     </li>
                                 </ul>
                             </div>

@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index');
-
 
 Auth::routes();
 
@@ -60,20 +58,15 @@ Route::delete('/contacts/delete/{id}' , 'ContactController@destroy')->name('cont
 
 //courses CRUD System
 
- Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
+//  Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
 
-     // COURSES SCOPE
-     Route::get('/courses', 'CourseController@index')->name('courses.index');
-     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
-     Route::post('/courses/store', 'CourseController@store')->name('courses.store');
-     Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
-     Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
-     Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
-
-     // SETTINGS SCOPE
-     Route::post('/settings/create', 'SettingsController@settingCreate');
-     Route::get('/settings', 'CourseController@settings');
- });
+    Route::get('/courses', 'CourseController@index')->name('courses.index');
+    Route::get('/courses/create', 'CourseController@create')->name('courses.create');
+    Route::post('/courses/store', 'CourseController@store')->name('courses.store');
+    Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
+    Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
+    Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
+// });
 
 //HeadQuartersCourse CRUD System
 Route::get('/headquarterCourse' , 'HeadQuartersCourseController@index')->name('headquarterCourse.index');
@@ -97,5 +90,6 @@ Route::delete('/onlineCourse/delete/{id}' , 'OnlineCoursesController@destroy')->
 Route::group(['namespace' => 'user'] , function (){
     Route::get('courses' , 'CourseController@courses');
     Route::get('course-details/{course_id}' , 'CourseController@courseDetails');
+    Route::get('/', 'HomeController@index');
 });
 // });
