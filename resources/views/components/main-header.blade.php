@@ -245,7 +245,7 @@
                     <div class="col-lg-8 col-md-12">
                         <div class="header-search-logo d-none d-lg-block">
                             <a class="header-logo" href="{{url('/')}}">
-                                <h3 class="header-brand-img" style="color: aliceblue">Kafa2aat</h3>
+                    <h3 class="header-brand-img" style="color: aliceblue">Kafa2aat</h3>
                                 <img src="../assets/images/brand/logo.png" class="header-brand-img header-white" alt="logo">
                             </a>
                         </div>

@@ -1,5 +1,5 @@
 @component('components.app')
-<x-header \>
+<x-header />
 
 <div class="bg-white border-bottom">
 			<div class="container">

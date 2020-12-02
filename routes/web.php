@@ -64,12 +64,12 @@ Route::delete('/contacts/delete/{id}' , 'ContactController@destroy')->name('cont
 
 // Route::group(['namespace' => 'admin' , 'middleware' => 'auth'] , function () {
 
-//     Route::get('/courses', 'CourseController@index')->name('courses.index');
-//     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
-//     Route::post('/courses/store', 'CourseController@store')->name('courses.store');
-//     Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
-//     Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
-//     Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
+    Route::get('/courses', 'CourseController@index')->name('courses.index');
+    Route::get('/courses/create', 'CourseController@create')->name('courses.create');
+    Route::post('/courses/store', 'CourseController@store')->name('courses.store');
+    Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
+    Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
+    Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
 // });
 
 //HeadQuartersCourse CRUD System
