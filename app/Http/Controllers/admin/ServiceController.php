@@ -16,6 +16,10 @@ class ServiceController extends Controller
         return view('admin.services.create');
      }
 
+     public function edit($service_id){
+         $service = Service::find($service_id);
+         return view('admin.services.edit')->with('service' , $service);
+     }
      public function store(Request  $request)
      {
 
@@ -31,6 +35,21 @@ class ServiceController extends Controller
      }
 
      public function destroy($service_id){
-         return $service_id;
+         $service = Service::find($service_id);
+         unlink(public_path('uploads/services/images/'. substr($service->image, strpos($service->image, "images/") + 7)));
+         $service->delete();
+         return redirect()->back()->with('success' , 'success deletion');
+     }
+
+     public function update(Request $request , $service_id){
+         $request_array = $request->all();
+         $service = Service::find($service_id);
+         if($request_array['image'] != null){
+             unlink(public_path('uploads/services/images/'. substr($service->image, strpos($service->image, "images/") + 7)));
+             $returned_image = $this->ImageUploader($request_array['image'] , 'uploads/services/images');
+             $request_array['image'] = $returned_image;
+         }
+         $service->update($request_array);
+         return redirect()->back()->with('success' , 'updated successfully');
      }
 }

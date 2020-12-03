@@ -2,6 +2,8 @@
 
 namespace App\Traits;
 
+use Spatie\LaravelImageOptimizer\Facades\ImageOptimizer;
+
 Trait ImageUploaderTrait
 {
 
