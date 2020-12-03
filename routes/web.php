@@ -22,7 +22,7 @@ Route::get('/logout' , function(){
     return redirect('/login');
 })->name('user.logout');
 
-Route::prefix('admin')->group(function () {
+Route::group(['prefix'=>'admin' , 'namespace' => 'admin'] ,function () {
 
 //Achievements CRUD System
 Route::get('/achievements' , 'AchievementController@index')->name('achievements.index');

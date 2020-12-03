@@ -8,10 +8,7 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    public function services(){
-        $services = Service::all();
-        return view('user.services.index' , ['services' => $services]);
-    }
+
 
     public function getServiceById($id){
         $servicesById = Service::find($id);

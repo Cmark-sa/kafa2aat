@@ -23,6 +23,7 @@
                 <p>some text will be provided here</p>
             </div>
             <div id="defaultCarousel" class="owl-carousel Card-owlcarousel owl-carousel-icons">
+                @if($services->count() > 0)
                 @foreach($services as $service)
                 <div class="item">
                     <div class="card mb-0">
@@ -55,6 +56,9 @@
                     </div>
                 </div>
                 @endforeach
+                @else
+               <span class="text-warning text-center"> no services provided yet !</span>
+                    @endif
             </div>
         </div>
     </section><!--/Section-->
