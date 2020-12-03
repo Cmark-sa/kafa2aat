@@ -70,7 +70,7 @@ Route::delete('/contacts/delete/{id}' , 'ContactController@destroy')->name('cont
     Route::post('/services/store', 'ServiceController@store')->name('services.store');
     Route::get('/services/edit/{id}', 'ServiceController@edit')->name('services.edit');
     Route::put('/services/update/{id}', 'ServiceController@update')->name('services.update');
-    Route::delete('/services/delete/{id}', 'ServiceController@destroy')->name('services.destroy');
+    Route::get('/services/delete/{id}', 'ServiceController@destroy')->name('services.destroy');
 
 //HeadQuartersCourse CRUD System
 Route::get('/headquarterCourse' , 'HeadQuartersCourseController@index')->name('headquarterCourse.index');

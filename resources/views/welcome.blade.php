@@ -29,7 +29,7 @@
                     <div class="card mb-0">
                         <div class="item7-card-img">
                             <a href="#"></a>
-                            <img src="{{asset($service->image)}}" alt="img" class="cover-image">
+                            <img src="{{$service->image}}" alt="img" class="cover-image">
                         </div>
                         <div class="card-body p-4">
                             <div class="item7-card-desc d-flex mb-2">
@@ -41,7 +41,7 @@
                             <a href="{{url('service/details/'.$service->id)}}" class="text-dark"><h3 class="font-weight-semibold">{{$service->title}}</h3></a>
 
                             <div class="d-flex align-items-center pt-2 mt-auto">
-                                <a href="{{url('service/details/'.$service->id)}}" class="btn btn-primary">المزيد من التفاصيل</a>
+                                <a href="{{url('/admin/services/delete/'.$service->id)}}" class="btn btn-primary">المزيد من التفاصيل</a>
 {{--                                <img src="../assets/images/users/male/5.jpg" class="avatar brround avatar-md mr-3" alt="avatar-img">--}}
 {{--                                <div>--}}
 {{--                                    <a href="profile.html" class="text-default">Joanne Nash</a>--}}

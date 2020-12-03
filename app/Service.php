@@ -8,4 +8,9 @@ class Service extends Model
 {
     protected $table = "services";
     protected $fillable = ['title' , 'description' , 'logo' , 'image'];
+
+
+    public function getImageAttribute($image){
+        return asset('uploads/services/images/'.$image);
+    }
 }

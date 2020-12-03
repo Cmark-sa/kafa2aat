@@ -29,4 +29,8 @@ class ServiceController extends Controller
          Service::create($request_array);
          return redirect()->back()->with('success' , 'created successfully');
      }
+
+     public function destroy($service_id){
+         return $service_id;
+     }
 }
