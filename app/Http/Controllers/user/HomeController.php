@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Service;
 use App\Setting;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
@@ -12,6 +13,7 @@ class HomeController extends Controller
 
     public function index()
     {
+
         $settings = Setting::first();
         Session::put('sitePhone' , $settings->phone);
         Session::put('siteAddress' , $settings->address);
@@ -21,6 +23,6 @@ class HomeController extends Controller
         Session::put('facebook_linkHeader' , $settings->facebook_link);
         Session::put('twitter_linkHeader' , $settings->twitter_link);
         Session::put('instagram_linkHeader' , $settings->instagram_link);
-        return view('welcome')->with(['settings' => $settings]);
+        return view('welcome')->with(['settings' => $settings ,'services' => Service::all()]);
     }
 }

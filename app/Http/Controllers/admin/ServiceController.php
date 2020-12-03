@@ -4,50 +4,33 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Service;
+use App\Traits\ImageUploaderTrait;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\DocBlock\Description;
 
 class ServiceController extends Controller
 {
-    public function index(){
-        $services = Service::all();
-        return view('admin.services.index' , ['services' => $services]);
-    }
+    use ImageUploaderTrait;
 
-    public function create(){
-        return view('admin.create.create');
-    }
+     public function create(){
+        return view('admin.services.create');
+     }
 
-    public function store(Request $request){
-        $services = new Service();
-        $services->title = $request->input('title');
-        $services->describtion = $request->input('describtion');
-        $services->logo = $request->input('logo');
-        $services->image = $request->input('image');
-        
-        $services->save();
-        
-        return redirect()->route('services.index');
-    }
+     public function store(Request  $request)
+     {
 
-    public function edit(Request $request , $id){
-        $services = Service::find($id);
-        return view('admin.services.edit' , ['services' => $services]);
-    }
+         $request_array = $request->all();
+         if($request_array['image'] != null){
 
-    public function update(Request $request , $id){
-        $services = Service::find($id);
-        $services->title = $request->input('title');
-        $services->describtion = $request->input('describtion');
-        $services->logo = $request->input('logo');
-        $services->image = $request->input('image');
-        
-        $services->save();
-        
-        return redirect()->route('services.index');
-    }
+             $returned_image = $this->ImageUploader($request_array['image'] , 'uploads/services/images');
+             $request_array['image'] = $returned_image;
+         }
 
-    public function destroy($id){
-        $services = Service::find($id)->delete();
-        return redirect()->route('services.index');
-    }
+         Service::create($request_array);
+         return redirect()->back()->with('success' , 'created successfully');
+     }
+
+     public function destroy($service_id){
+         return $service_id;
+     }
 }

@@ -160,16 +160,37 @@
             <div class="horizontal-mainwrapper container clearfix">
                 <nav class="horizontalMenu clearfix d-md-flex">
                     <ul class="horizontalMenu-list">
-                        <li aria-haspopup="true"><a href="{{url('/')}}">Home</a>
+                        <li aria-haspopup="true"><a href="#">Home</a>
 
                         </li>
+                        <li aria-haspopup="true"><a href="#">Services <span class="fe fe-chevron-down"></span> </a>
+                            <ul class="sub-menu">
+                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Design and draw strategic plans for institutions </a></li>
+                                <li aria-haspopup="true"><a href="{{url('organizing-exhibitions-confrences')}}" class=""> Organizing exhibitions and conferences </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class="">Organizing Qualifying and specialized Courses </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class="">Organizing and supervising media campaigns </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class="">Providing studies and consultations </a></li>
+                            </ul>
+                        </li>
 
-                        <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Courses </a></li>
-                        <li aria-haspopup="true"><a href="{{url('business-areas')}}">Business Areas </a></li>
+                        <li aria-haspopup="true"><a href="#">Business Areas <span class="fe fe-chevron-down"></span> </a>
+                            <ul class="sub-menu">
+                                <li aria-haspopup="true"><a href="#">Administrative field</a></li>
+                                <li aria-haspopup="true"><a href="#">Financial field</a></li>
+                                <li aria-haspopup="true"><a href="#">Tourist field</a></li>
+                                <li aria-haspopup="true"><a href="#">Electronic field</a></li>
+                                <li aria-haspopup="true"><a href="#">Computer field</a></li>
+                                <li aria-haspopup="true"><a href="#">English field</a></li>
+                                <li aria-haspopup="true"><a href="#">Self Development field</a></li>
+                                <li aria-haspopup="true"><a href="#">Social field</a></li>
+
+                            </ul>
+                        </li>
                         <li aria-haspopup="true"><a href="{{url('achievements')}}">Achievements</a></li>
-                        <li aria-haspopup="true"><a href="#">About Us </a></li>
+                        <li aria-haspopup="true"><a href="#about-us">About Us </a></li>
                         <li aria-haspopup="true"><a href="{{url('contact')}}">Contact Us</a></li>
                     </ul>
+
                 </nav>
             </div>
         </div>
@@ -182,7 +203,7 @@
                 <div class="container">
                     <div class="text-center text-white">
 
-                     <h1 class="">Login</h1>
+{{--                     <h1 class="">Login</h1>--}}
                         <ol class="breadcrumb text-center">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Pages</a></li>
