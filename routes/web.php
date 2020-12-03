@@ -102,4 +102,6 @@ Route::group(['namespace' => 'user'] , function (){
     Route::get('services' , 'ServiceController@services');
     Route::get('services-details/{service_id}' , 'ServiceController@getServiceById');
 });
+
+Route::get('/sendSms' , 'ContactController@sendTextSms');
 // });
