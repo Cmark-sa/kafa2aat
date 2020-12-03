@@ -31,9 +31,9 @@ class ContactController extends Controller
 
         $client = new \GuzzleHttp\Client();
         $res = $client->request('GET', 'http://www.sms4ksa.com/api/sendsms.php?username=yahy&password=102030&message=fromApi&numbers=+966504688057&sender=fahmy');
-        dd($res->getStatusCode());
-        echo $res->getStatusCode(); // 200
-        echo $res->getBody();
+        // dd($res->getStatusCode());
+        // echo $res->getStatusCode(); // 200
+        // echo $res->getBody();
 
         return back()->with('message' , 'thanks . Your inquiry will be sent to the institute');
     }
