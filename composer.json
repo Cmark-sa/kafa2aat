@@ -15,7 +15,11 @@
         "laravel/framework": "^7.29",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.5",
+<<<<<<< HEAD
         "spatie/laravel-image-optimizer": "^1.6"
+=======
+        "nexmo/client": "^2.4"
+>>>>>>> 862e680fa5ecbdd8571be850d02eb812e0961036
     },
     "require-dev": {
         "facade/ignition": "^2.0",

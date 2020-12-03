@@ -69,6 +69,7 @@ Route::put('/contacts/update/{id}' , 'ContactController@update')->name('contacts
 Route::get('/contacts/delete/{id}' , 'ContactController@destroy')->name('contacts.destroy');
 
 //courses CRUD System
+<<<<<<< HEAD
     Route::get('/courses', 'CourseController@index')->name('courses.index');
     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
     Route::post('/courses/store', 'CourseController@store')->name('courses.store');
@@ -81,6 +82,22 @@ Route::get('/contacts/delete/{id}' , 'ContactController@destroy')->name('contact
     Route::get('/services/create', 'ServiceController@create')->name('services.create');
     Route::get('/services/edit/{id}', 'ServiceController@edit')->name('services.edit');
     Route::get('/services/delete/{id}', 'ServiceController@destroy')->name('services.destroy');
+=======
+Route::get('/courses', 'CourseController@index')->name('courses.index');
+Route::get('/courses/create', 'CourseController@create')->name('courses.create');
+Route::post('/courses/store', 'CourseController@store')->name('courses.store');
+Route::get('/courses/edit/{id}', 'CourseController@edit')->name('courses.edit');
+Route::put('/courses/update/{id}', 'CourseController@update')->name('courses.update');
+Route::delete('/courses/delete/{id}', 'CourseController@destroy')->name('courses.destroy');
+
+//services CRUD System
+Route::get('/services', 'ServiceController@index')->name('services.index');
+Route::get('/services/create', 'ServiceController@create')->name('services.create');
+Route::post('/services/store', 'ServiceController@store')->name('services.store');
+Route::get('/services/edit/{id}', 'ServiceController@edit')->name('services.edit');
+Route::put('/services/update/{id}', 'ServiceController@update')->name('services.update');
+Route::get('/services/delete/{id}', 'ServiceController@destroy')->name('services.destroy');
+>>>>>>> 862e680fa5ecbdd8571be850d02eb812e0961036
 
     Route::group(['middleware' => 'optimizeImages'] ,function () {
         Route::post('/services/store', 'ServiceController@store')->name('services.store');
@@ -119,4 +136,3 @@ Route::group(['namespace' => 'user'] , function (){
     Route::get('services' , 'ServiceController@services');
     Route::get('services-details/{service_id}' , 'ServiceController@getServiceById');
 });
-// });
