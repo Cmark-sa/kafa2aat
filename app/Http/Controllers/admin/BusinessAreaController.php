@@ -4,10 +4,13 @@ namespace App\Http\Controllers\admin;
 
 use App\BusinessArea;
 use App\Http\Controllers\Controller;
+use App\Traits\ImageUploaderTrait;
 use Illuminate\Http\Request;
 
 class BusinessAreaController extends Controller
 {
+    use ImageUploaderTrait;
+
     public function index(){
         dd('Hello From BusinessAreaController :)');
         $business_area = BusinessArea::all();
@@ -20,14 +23,15 @@ class BusinessAreaController extends Controller
     }
 
     public function store(Request $request){
-        $business_area = new BusinessArea();
-        $business_area->title = $request->input('title');
-        $business_area->description = $request->input('description');
-        $business_area->image = $request->input('image');// we 'll talk about how media and image moves and put in the site
+        $request_array = $request->all();
+         if($request_array['image'] != null){
 
-        $business_area->save();
+             $returned_image = $this->ImageUploader($request_array['image'] , 'uploads/business_area/images');
+             $request_array['image'] = $returned_image;
+         }
 
-        return redirect()->route('business_area.index');
+         BusinessArea::create($request_array);
+         return redirect()->back()->with('success' , 'created successfully');
     }
 
     public function edit($id){
@@ -37,18 +41,21 @@ class BusinessAreaController extends Controller
     }
 
     public function update(Request $request , $id){
-        $business_area = BusinessArea::find($id);
-        $business_area->title = $request->input('title');
-        $business_area->description = $request->input('description');
-        $business_area->image = $request->input('image');// we 'll talk about how media and image moves and put in the site
-
-        $business_area->save();
-
-        return redirect()->route('business_area.index');
+        $request_array = $request->all();
+         $business_area = BusinessArea::find($id);
+         if($request_array['image'] != null){
+             unlink(public_path('uploads/business_area/images/'. substr($business_area->image, strpos($business_area->image, "images/") + 7)));
+             $returned_image = $this->ImageUploader($request_array['image'] , 'uploads/business_area/images');
+             $request_array['image'] = $returned_image;
+         }
+         $business_area->update($request_array);
+         return redirect()->back()->with('success' , 'updated successfully');
     }
 
     public function destroy($id){
-        $business_area = BusinessArea::find($id)->delete();
-        return redirect()->route('business_area.index');
+        $business_area = BusinessArea::find($id);
+         unlink(public_path('uploads/business_area/images/'. substr($business_area->image, strpos($business_area->image, "images/") + 7)));
+         $business_area->delete();
+         return redirect()->back()->with('success' , 'success deletion');
     }
 }

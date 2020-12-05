@@ -19,14 +19,15 @@ class AdsController extends Controller
     }
 
     public function store(Request $request){
-        $ads = new Ads();
-        $ads->title = $request->input('title');
-        $ads->description = $request->input('description');
-        $ads->image = $request->input('image');// we 'll talk about how media and image moves and put in the site
+        $request_array = $request->all();
+         if($request_array['image'] != null){
 
-        $ads->save();
+             $returned_image = $this->ImageUploader($request_array['image'] , 'uploads/ads/images');
+             $request_array['image'] = $returned_image;
+         }
 
-        return redirect()->route('ads.index');
+         Ads::create($request_array);
+         return redirect()->back()->with('success' , 'created successfully');
     }
 
     public function edit($id){
@@ -36,18 +37,21 @@ class AdsController extends Controller
     }
 
     public function update(Request $request , $id){
-        $ads = Ads::find($id);
-        $ads->title = $request->input('title');
-        $ads->description = $request->input('description');
-        $ads->image = $request->input('image');// we 'll talk about how media and image moves and put in the site
-
-        $ads->save();
-
-        return redirect()->route('ads.index');
+        $request_array = $request->all();
+         $ads = Ads::find($id);
+         if($request_array['image'] != null){
+             unlink(public_path('uploads/ads/images/'. substr($ads->image, strpos($ads->image, "images/") + 7)));
+             $returned_image = $this->ImageUploader($request_array['image'] , 'uploads/ads/images');
+             $request_array['image'] = $returned_image;
+         }
+         $ads->update($request_array);
+         return redirect()->back()->with('success' , 'updated successfully');
     }
 
     public function destroy($id){
-        $ads = Ads::find($id)->delete();
-        return redirect()->route('ads.index');
+         $ads = Ads::find($id);
+         unlink(public_path('uploads/ads/images/'. substr($ads->image, strpos($ads->image, "images/") + 7)));
+         $ads->delete();
+         return redirect()->back()->with('success' , 'success deletion');
     }
 }
