@@ -10,7 +10,7 @@ class CourseController extends Controller
 {
     public function courses(){
 
-         return view ('user.courses.index')->with('courses' ,   Course::all());
+         return view ('user.courses.index')->with('courses' ,   Course::simplePaginate(4));
     }
 
     public function courseDetails($course_id){
