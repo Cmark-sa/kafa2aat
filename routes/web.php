@@ -69,7 +69,7 @@ Route::put('/contacts/update/{id}' , 'ContactController@update')->name('contacts
 Route::get('/contacts/delete/{id}' , 'ContactController@destroy')->name('contacts.destroy');
 
 //courses CRUD System
-<<<<<<< HEAD
+
     Route::get('/courses', 'CourseController@index')->name('courses.index');
     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
     Route::post('/courses/store', 'CourseController@store')->name('courses.store');
