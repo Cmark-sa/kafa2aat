@@ -25,19 +25,23 @@
 								<div class="row">
                         <div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
                             <div class="search-background bg-transparent">
+							<form method="GET" id="formGet">
                                 <div class="form row no-gutters ">
+									
                                     <div class="form-group  col-xl-4 col-lg-3 col-md-12 mb-0 bg-white ">
                                         <input type="text" name="search" class="form-control input-lg br-tr-md-0 br-br-md-0" id="search" placeholder="Search Courses.....">
                                     </div>
                                     <div class="form-group  col-xl-3 col-lg-3 col-md-12 mb-0 bg-white">
-                                        <select name="types" id="types" class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
+                                        <select name="type" id="type" class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
                                                 <option selected disabled>Select Course Type</option>
                                                  <option value="1">Online</option>
                                                  <option value="2">Registered</option>
                                                  <option value="3">Headquarter</option>
                                         </select>
-                                    </div>
+									</div>
+									
 								</div>
+								</form>
                             </div>
                         </div>
                     </div>
@@ -194,11 +198,16 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
 	$(document).ready(function(){
-		console.log('fahmy is here');
-		$("#search").on('keyup' , function(e){
+		// console.log('fahmy is here');
+		var type="";
+		$('#type').on('change' , function(e){
+			type = e.target.value;
+		});
+
+		$("#formGet").on('change' , function(e){
 			name = e.target.value;
 			console.log(name);
-            $.get('/getDataCourse' , {search:name} , function(response , status){
+            $.get('/getDataCourse' , {search:name , type:type} , function(response , status){
                 $('.fetchDataHere').empty();
                 console.log(response.data);
 				if(response.data != ""){
@@ -212,7 +221,7 @@
 											<img src="../assets/images/media/11.jpg" alt="img" class="cover-image">
 										</div>
 										<div class="item-overly-trans">
-											@if(`+response.data[i].type+`== 1)
+											@if(`+response.data[i].type+` == 1)
 												<a href="/course-details/`+response.data[i].id+`" class="bg-primary">Online</a>
 											@elseif(`+response.data[i].type+` == 2)
 												<a href="/course-details/`+response.data[i].id+`" class="bg-primary">Registered</a>

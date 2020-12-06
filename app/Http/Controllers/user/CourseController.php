@@ -21,8 +21,10 @@ class CourseController extends Controller
 
     public function getDataOfCourse(Request $request){
           $name = $request->input('search');
+          $type = $request->input('type');
                if($name != ''){
                     $query = Course::where('title', 'like', '%'.$name.'%')
+                    ->orWhere('type' , '=' , $type)
                     ->simplePaginate(15);
                return response()->json($query);
                }else{
