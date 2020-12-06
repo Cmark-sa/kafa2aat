@@ -112,6 +112,7 @@ Route::get('/onlineCourse/delete/{id}' , 'OnlineCoursesController@destroy')->nam
 Route::group(['namespace' => 'user'] , function (){
     Route::get('courses' , 'CourseController@courses');
     Route::get('course-details/{course_id}' , 'CourseController@courseDetails');
+    Route::get('/getDataCourse' , 'CourseController@getDataOfCourse');
     Route::get('/', 'HomeController@index');
     Route::get('business-areas' , 'BusinessAreaController@index');
     Route::get('achievements' , 'AchievementController@index');

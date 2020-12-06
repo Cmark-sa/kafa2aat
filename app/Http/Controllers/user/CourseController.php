@@ -19,4 +19,14 @@ class CourseController extends Controller
          return view('user.courses.course-details')->with('course' ,Course::find($course_id));
     }
 
+    public function getDataOfCourse(Request $request){
+          $name = $request->input('search');
+               if($name != ''){
+                    $query = Course::where('title', 'like', '%'.$name.'%')
+                    ->simplePaginate(15);
+               return response()->json($query);
+               }else{
+                    return response()->json(['message' => 'failed']);
+               }
+    }
 }

@@ -330,6 +330,7 @@
                         <h1 class="mb-1">Find The Best Courses and Build Your Future</h1>
 
                     </div>
+                    
                     <div class="row">
                         <div class="col-xl-10 col-lg-12 col-md-12 d-block mx-auto">
                             <div class="search-background bg-transparent">
