@@ -36,6 +36,7 @@ class CourseController extends Controller
                     return response()->json(['message' => 'failed']);
                }
     }
+<<<<<<< HEAD
 
     public function specialistCourses($specialist_id,$req_type){
 
@@ -59,5 +60,10 @@ class CourseController extends Controller
              return $courses;
         }else
             return 0;
+=======
+    public function getAllCoursesAjax(){
+          $coursesAjax = Course::simplePaginate(15);
+          return response()->json($coursesAjax);
+>>>>>>> 7078176e93b45a4c76108ebab8756b5c1874389e
     }
 }
