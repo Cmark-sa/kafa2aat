@@ -31,4 +31,8 @@ class CourseController extends Controller
                     return response()->json(['message' => 'failed']);
                }
     }
+    public function getAllCoursesAjax(){
+          $coursesAjax = Course::simplePaginate(15);
+          return response()->json($coursesAjax);
+    }
 }
