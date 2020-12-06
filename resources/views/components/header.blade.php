@@ -1,63 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <!-- Meta data -->
-    <meta charset="UTF-8">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta content=" Eudica - Online Education & Learning Courses HTML CSS Responsive Template" name="description">
-    <meta content="Spruko Technologies Private Limited" name="author">
-    <meta name="keywords" content="html rtl, html dir rtl, rtl website template, bootstrap 4 rtl template, rtl bootstrap template, admin panel template rtl, admin panel rtl, html5 rtl, academy training course css template, classes online training website templates, courses training html5 template design, education training rwd simple template, educational learning management jquery html, elearning bootstrap education template, professional training center bootstrap html, institute coaching mobile responsive template, marketplace html template premium, learning management system jquery html, clean online course teaching directory template, online learning course management system, online course website template css html, premium lms training web template, training course responsive website"/>
 
-    <!-- Favicon -->
-    <link rel="icon" href="../assets/images/brand/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/brand/favicon.ico" />
 
-    <!-- Title -->
-    <title> Eudica - Online Education & Learning Courses HTML CSS Responsive Template</title>
-
-    <!-- Bootstrap css -->
-    <link href="../assets/plugins/bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- Style css -->
-    <link href="../assets/css/style.css" rel="stylesheet" />
-    <link href="../assets/css/skin-modes.css" rel="stylesheet" />
-
-    <!-- Font-awesome  css -->
-    <link href="../assets/css/icons.css" rel="stylesheet"/>
-
-    <!--Horizontal Menu css-->
-    <link href="../assets/plugins/horizontal-menu/horizontal-menu.css" rel="stylesheet" />
-
-    <!--Select2 css -->
-    <link href="../assets/plugins/select2/select2.min.css" rel="stylesheet" />
-
-    <!-- Cookie css -->
-    <link href="../assets/plugins/cookie/cookie.css" rel="stylesheet">
-
-    <!-- Owl Theme css-->
-    <link href="../assets/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" />
-
-    <!-- Custom scroll bar css-->
-    <link href="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
-
-    <!-- Pscroll bar css-->
-    <link href="../assets/plugins/pscrollbar/pscrollbar.css" rel="stylesheet" />
-
-    <!-- Switcher css -->
-    <link  href="../assets/switcher/css/switcher.css" rel="stylesheet" id="switcher-css" type="text/css" media="all"/>
-
-    <!-- Color Skin css -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all" href="../assets/color-skins/color8.css" />
-
-</head>
-
-<body>
-
-{{--<!--Loader-->--}}
-{{--<div id="global-loader">--}}
-{{--    <img src="../assets/images/loader.svg" class="loader-img" alt="img">--}}
-{{--</div><!--/Loader-->--}}
 <div class="cover-image bg-background3" data-image-src="../assets/images/banners/banner2.jpg">
     <!--Topbar-->
     <div class="header-main">
@@ -116,7 +58,7 @@
                     <div class="col-lg-8 col-md-12">
                         <div class="header-search-logo d-none d-lg-block">
                             <a class="header-logo" href="{{url('/')}}">
-                                <img src="../assets/images/brand/logo1.png" class="header-brand-img" alt=" logo">
+                                <h3 class="header-brand-img" style="color: aliceblue">{{Session::get('site_nameHeader')}}</h3>
                                 <img src="../assets/images/brand/logo.png" class="header-brand-img header-white" alt="logo">
                             </a>
                         </div>
@@ -160,12 +102,13 @@
             <div class="horizontal-mainwrapper container clearfix">
                 <nav class="horizontalMenu clearfix d-md-flex">
                     <ul class="horizontalMenu-list">
-                        <li aria-haspopup="true"><a href="#">Home</a>
+                        <li aria-haspopup="true"><a href="{{url('/')}}">Home</a>
 
                         </li>
                         <li aria-haspopup="true"><a href="#">Services <span class="fe fe-chevron-down"></span> </a>
                             <ul class="sub-menu">
-                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Design and draw strategic plans for institutions </a></li>
+                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Courses </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class="">Design and draw strategic plans for institutions </a></li>
                                 <li aria-haspopup="true"><a href="{{url('organizing-exhibitions-confrences')}}" class=""> Organizing exhibitions and conferences </a></li>
                                 <li aria-haspopup="true"><a href="{{url('/')}}" class="">Organizing Qualifying and specialized Courses </a></li>
                                 <li aria-haspopup="true"><a href="{{url('/')}}" class="">Organizing and supervising media campaigns </a></li>
@@ -187,6 +130,8 @@
                             </ul>
                         </li>
                         <li aria-haspopup="true"><a href="{{url('achievements')}}">Achievements</a></li>
+                        <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Courses </a></li>
+                        <li aria-haspopup="true"><a href="{{url('partners')}}">Partners</a></li>
                         <li aria-haspopup="true"><a href="#about-us">About Us </a></li>
                         <li aria-haspopup="true"><a href="{{url('contact')}}">Contact Us</a></li>
                     </ul>

@@ -1,17 +1,5 @@
 @component('components.app')
 <x-header />
-<div class="bg-white border-bottom">
-			<div class="container">
-				<div class="page-header">
-					<h4 class="page-title">Course List</h4>
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item"><a href="#">Pages</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Course List</li>
-					</ol>
-				</div>
-			</div>
-		</div>	<!--/Breadcrumb-->
 
 		<!--Section-->
 		<section class="sptb">
@@ -790,89 +778,19 @@
 						</div>
 						<div class="card mb-0">
 							<div class="card-header">
-								<h3 class="card-title">Categories</h3>
+								<h3 class="card-title">Specialists</h3>
 							</div>
 							<div class="card-body">
 								<div class="" id="container">
 									<div class="filter-product-checkboxs">
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox1" value="option1">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Business<span class="label label-secondary float-right">14</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Data Science<span class="label label-secondary float-right">22</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox3" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">IT<span class="label label-secondary float-right">78</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox4" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Marketing<span class="label label-secondary float-right">35</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox5" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Beautician<span class="label label-secondary float-right">23</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox6" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Photography<span class="label label-secondary float-right">14</span></a>
-											</span>
-										</label>
+										@foreach($specialists as $specialist)
 										<label class="custom-control custom-checkbox mb-3">
 											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
 											<span class="custom-control-label">
-												<a href="#" class="text-dark">Litarature <span class="label label-secondary float-right">45</span></a>
+												<a href="#" class="text-dark">{{$specialist}}<span class="label label-secondary float-right">32</span></a>
 											</span>
 										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Law<span class="label label-secondary float-right">34</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Nursing<span class="label label-secondary float-right">12</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Digital Marketing<span class="label label-secondary float-right">18</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Web Designing<span class="label label-secondary float-right">02</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Languages<span class="label label-secondary float-right">15</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">App Development<span class="label label-secondary float-right">32</span></a>
-											</span>
-										</label>
+                                        @endforeach
 									</div>
 								</div>
 							</div>
@@ -965,28 +883,5 @@
 			</div>
 		</section><!--Section-->
 
-		<!-- Onlinesletter-->
-		<section class="sptb bg-white border-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7 col-xl-6 col-md-12">
-						<div class="sub-newsletter">
-							<h3 class="mb-2"><i class="fa fa-paper-plane-o mr-2"></i> Subscribe To Our Onlinesletter</h3>
-							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-						</div>
-					</div>
-					<div class="col-lg-5 col-xl-6 col-md-12">
-						<div class="input-group sub-input mt-1">
-							<input type="text" class="form-control input-lg " placeholder="Enter your Email">
-							<div class="input-group-append ">
-								<button type="button" class="btn btn-primary btn-lg br-tr-3  br-br-3">
-									Subscribe
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/Onlinesletter-->
 
 @endcomponent

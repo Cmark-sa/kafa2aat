@@ -69,10 +69,7 @@ Route::put('/contacts/update/{id}' , 'ContactController@update')->name('contacts
 Route::get('/contacts/delete/{id}' , 'ContactController@destroy')->name('contacts.destroy');
 
 //courses CRUD System
-<<<<<<< HEAD
 
-=======
->>>>>>> e9ffdc0f513eae3adbc5490bd75a48eee197951d
     Route::get('/courses', 'CourseController@index')->name('courses.index');
     Route::get('/courses/create', 'CourseController@create')->name('courses.create');
     Route::post('/courses/store', 'CourseController@store')->name('courses.store');
@@ -93,6 +90,18 @@ Route::get('/contacts/delete/{id}' , 'ContactController@destroy')->name('contact
 
     });
 
+    Route::get('/specialists', 'SpecialistController@index');
+    Route::get('/specialist/create', 'SpecialistController@create');
+    Route::get('/specialist/edit/{id}', 'SpecialistController@edit');
+    Route::get('/specialist/delete/{id}', 'SpecialistController@destroy');
+
+    Route::group(['middleware' => 'optimizeImages'] ,function () {
+        Route::post('/specialist/store', 'SpecialistController@store');
+        Route::put('/specialist/update/{id}', 'SpecialistController@update');
+
+
+    });
+
 //HeadQuartersCourse CRUD System
 Route::get('/headquarterCourse' , 'HeadQuartersCourseController@index')->name('headquarterCourse.index');
 Route::get('/headquarterCourse/create' , 'HeadQuartersCourseController@create')->name('headquarterCourse.create');
@@ -109,6 +118,13 @@ Route::get('/onlineCourse/edit/{id}' , 'OnlineCoursesController@edit')->name('on
 Route::put('/onlineCourse/update/{id}' , 'OnlineCoursesController@update')->name('onlineCourse.update');
 Route::get('/onlineCourse/delete/{id}' , 'OnlineCoursesController@destroy')->name('onlineCourse.destroy');
 
+    Route::get('/partners' , 'PartnerController@index');
+    Route::get('/partners/create' , 'PartnerController@create');
+    Route::post('/partners/store' , 'PartnerController@store');
+    Route::get('/partners/edit/{id}' , 'PartnerController@edit');
+    Route::put('/partners/update/{id}' , 'PartnerController@update');
+    Route::get('/partners/delete/{id}' , 'PartnerController@destroy');
+
 });
 
 // Courses Routes - (USER ROUTES)
@@ -121,5 +137,6 @@ Route::group(['namespace' => 'user'] , function (){
     Route::get('contact' , 'ContactController@contact');
     Route::post('contact' , 'ContactController@storeContact')->name('userContact');
     Route::get('services' , 'ServiceController@services');
-    Route::get('services-details/{service_id}' , 'ServiceController@getServiceById');
+    Route::get('service/details/{service_id}' , 'ServiceController@getServiceById');
+    Route::get('subscribe' , 'SubscriptionController@subscribe');
 });

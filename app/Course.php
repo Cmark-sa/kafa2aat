@@ -15,7 +15,8 @@ class Course extends Model
         'category',
         'duration',
         'price',
-        'date'
+        'date',
+        'image_cover'
     ];
 
     public function headquartersCourses(){
