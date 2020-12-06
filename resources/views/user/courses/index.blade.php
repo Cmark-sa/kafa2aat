@@ -15,7 +15,7 @@
                             <div class="search-background bg-transparent">
 							<form method="GET" id="formGet">
                                 <div class="form row no-gutters ">
-									
+
                                     <div class="form-group  col-xl-4 col-lg-3 col-md-12 mb-0 bg-white ">
                                         <input type="text" name="search" class="form-control input-lg br-tr-md-0 br-br-md-0" id="search" placeholder="Search Courses.....">
                                     </div>
@@ -27,7 +27,7 @@
                                                  <option value="3">Headquarter</option>
                                         </select>
 									</div>
-									
+
 								</div>
 								</form>
                             </div>
@@ -35,24 +35,12 @@
                     </div>
 									<div class="tab-content">
 										<div class="tab-pane active fetchDataHere" id="tab-11">
-											
+
 										</div>
 									</div>
 								</div>
-								
-								<!-- <div class="center-block text-center">
-									<ul class="pagination mb-5 mb-lg-0">
-										<li class="page-item page-prev disabled">
-											<a class="page-link" href="#" tabindex="-1">Prev</a>
-										</li>
-										<li class="page-item active"><a class="page-link" href="#">1</a></li>
-										<li class="page-item"><a class="page-link" href="#">2</a></li>
-										<li class="page-item"><a class="page-link" href="#">3</a></li>
-										<li class="page-item page-next">
-											<a class="page-link" href="#">Next</a>
-										</li>
-									</ul>
-								</div> -->
+
+
 							</div>
 						</div>
 						<!--/Coursed lists-->
@@ -60,7 +48,7 @@
 
 					<!--Right Side Content-->
 					<div class="col-xl-3 col-lg-4 col-md-12">
-						
+
 						<div class="card mb-0">
 							<div class="card-header">
 								<h3 class="card-title">Specialists</h3>
@@ -70,16 +58,16 @@
 									<div class="filter-product-checkboxs">
 										@foreach($specialists as $specialist)
 										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
+											<input onclick="getCoursesBySpecialistId({{$specialist->id}})" id="spec_id_input-{{$specialist->id}}" type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
 											<span class="custom-control-label">
-												<a href="#" class="text-dark">{{$specialist}}<span class="label label-secondary float-right">32</span></a>
+												<a href="#"  class="text-dark">{{$specialist->title}}<span class="label label-secondary float-right">{{$specialist->courses->count()}}</span></a>
 											</span>
 										</label>
                                         @endforeach
 									</div>
 								</div>
 							</div>
-							
+
 							<div class="card-footer">
 								<a href="#" class="btn btn-primary btn-block">Apply Filter</a>
 							</div>
@@ -90,32 +78,8 @@
 			</div>
 		</section><!--Section-->
 
-<<<<<<< HEAD
-=======
-		<!-- Onlinesletter-->
-		<section class="sptb bg-white border-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7 col-xl-6 col-md-12">
-						<div class="sub-newsletter">
-							<h3 class="mb-2"><i class="fa fa-paper-plane-o mr-2"></i> Subscribe To Our Onlinesletter</h3>
-							<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-						</div>
-					</div>
-					<div class="col-lg-5 col-xl-6 col-md-12">
-						<div class="input-group sub-input mt-1">
-							<input type="text" class="form-control input-lg " placeholder="Enter your Email">
-							<div class="input-group-append ">
-								<button type="button" class="btn btn-primary btn-lg br-tr-3  br-br-3">
-									Subscribe
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/Onlinesletter-->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
 <script>
 	$(document).ready(function(){
 		// console.log('fahmy is here');
@@ -123,7 +87,6 @@
 		$('#type').on('change' , function(e){
 			type = e.target.value;
 		});
->>>>>>> d75a6417559452aecbcbbd227c716c6f17d027af
 
 		$("#formGet").on('change' , function(e){
 			name = e.target.value;

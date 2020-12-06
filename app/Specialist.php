@@ -15,6 +15,10 @@ class Specialist extends Model
     }
 
     public function scopeTitlesOnLY($query){
-        return $query->pluck('title');
+        return $query->select(['id','title'])->get();
+    }
+
+    public function courses(){
+        return $this->hasMany('App\Course' , 'specialist_id' , 'id');
     }
 }
