@@ -26,8 +26,8 @@ class ServiceController extends Controller
          $request_array = $request->all();
          if($request_array['image'] != null){
 
-             $returned_image = $this->ImageUploader($request_array['image'] , 'uploads/services/images');
-             $request_array['image'] = $returned_image;
+             $request_array['image'] = $this->ImageUploader($request_array['image'] , 'uploads/services/images');
+
          }
 
          Service::create($request_array);

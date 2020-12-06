@@ -8,4 +8,8 @@ class Partner extends Model
 {
     protected $table = "partners";
     protected $fillable = ['logo' , 'company_name'];
+
+    public function getLogoAttribute($logo){
+        return asset('uploads/partners/logos/'.$logo);
+    }
 }

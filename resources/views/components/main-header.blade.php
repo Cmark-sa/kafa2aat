@@ -290,8 +290,9 @@
                         </li>
                         <li aria-haspopup="true"><a href="#">Services <span class="fe fe-chevron-down"></span> </a>
                             <ul class="sub-menu">
-                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Design and draw strategic plans for institutions </a></li>
-                                <li aria-haspopup="true"><a href="{{url('organizing-exhibitions-confrences')}}" class=""> Organizing exhibitions and conferences </a></li>
+                                <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Courses </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class="">Design and draw strategic plans for institutions </a></li>
+                                <li aria-haspopup="true"><a href="{{url('/')}}" class=""> Organizing exhibitions and conferences </a></li>
                                 <li aria-haspopup="true"><a href="{{url('/')}}" class="">Organizing Qualifying and specialized Courses </a></li>
                                 <li aria-haspopup="true"><a href="{{url('/')}}" class="">Organizing and supervising media campaigns </a></li>
                                 <li aria-haspopup="true"><a href="{{url('/')}}" class="">Providing studies and consultations </a></li>
@@ -311,7 +312,9 @@
 
                             </ul>
                         </li>
+                        <li aria-haspopup="true"><a href="{{url('courses')}}" class="">Courses </a></li>
                         <li aria-haspopup="true"><a href="{{url('achievements')}}">Achievements</a></li>
+                        <li aria-haspopup="true"><a href="{{url('partners')}}">Partners</a></li>
                         <li aria-haspopup="true"><a href="#about-us">About Us </a></li>
                         <li aria-haspopup="true"><a href="{{url('contact')}}">Contact Us</a></li>
                     </ul>

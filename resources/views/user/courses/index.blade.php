@@ -1,17 +1,5 @@
 @component('components.app')
 <x-header />
-<div class="bg-white border-bottom">
-			<div class="container">
-				<div class="page-header">
-					<h4 class="page-title">Course List</h4>
-					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Home</a></li>
-						<li class="breadcrumb-item"><a href="#">Pages</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Course List</li>
-					</ol>
-				</div>
-			</div>
-		</div>	<!--/Breadcrumb-->
 
 		<!--Section-->
 		<section class="sptb">
@@ -114,89 +102,19 @@
 						
 						<div class="card mb-0">
 							<div class="card-header">
-								<h3 class="card-title">Categories</h3>
+								<h3 class="card-title">Specialists</h3>
 							</div>
 							<div class="card-body">
 								<div class="" id="container">
 									<div class="filter-product-checkboxs">
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox1" value="option1">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Business<span class="label label-secondary float-right">14</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox2" value="option2">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Data Science<span class="label label-secondary float-right">22</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox3" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">IT<span class="label label-secondary float-right">78</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox4" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Marketing<span class="label label-secondary float-right">35</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox5" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Beautician<span class="label label-secondary float-right">23</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox6" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Photography<span class="label label-secondary float-right">14</span></a>
-											</span>
-										</label>
+										@foreach($specialists as $specialist)
 										<label class="custom-control custom-checkbox mb-3">
 											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
 											<span class="custom-control-label">
-												<a href="#" class="text-dark">Litarature <span class="label label-secondary float-right">45</span></a>
+												<a href="#" class="text-dark">{{$specialist}}<span class="label label-secondary float-right">32</span></a>
 											</span>
 										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Law<span class="label label-secondary float-right">34</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Nursing<span class="label label-secondary float-right">12</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Digital Marketing<span class="label label-secondary float-right">18</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Web Designing<span class="label label-secondary float-right">02</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">Languages<span class="label label-secondary float-right">15</span></a>
-											</span>
-										</label>
-										<label class="custom-control custom-checkbox mb-3">
-											<input type="checkbox" class="custom-control-input" name="checkbox7" value="option3">
-											<span class="custom-control-label">
-												<a href="#" class="text-dark">App Development<span class="label label-secondary float-right">32</span></a>
-											</span>
-										</label>
+                                        @endforeach
 									</div>
 								</div>
 							</div>
@@ -211,6 +129,8 @@
 			</div>
 		</section><!--Section-->
 
+<<<<<<< HEAD
+=======
 		<!-- Onlinesletter-->
 		<section class="sptb bg-white border-top">
 			<div class="container">
@@ -242,6 +162,7 @@
 		$('#type').on('change' , function(e){
 			type = e.target.value;
 		});
+>>>>>>> d75a6417559452aecbcbbd227c716c6f17d027af
 
 		$("#formGet").on('change' , function(e){
 			name = e.target.value;
@@ -308,8 +229,16 @@
 				success:function(response){
 					console.log(response.data);
 					if(response.data != ""){
+						var courseType="";
 						$('.fetchDataHere').empty();
 					for(var i = 0 ; i < response.data.length ; i++){
+						if(response.data[i].type == 1){
+							courseType = 'Online'
+						}else if(response.data[i].type == 2){
+							courseType = 'Registered'
+						}else{
+							courseType = 'Headquarter'
+						}
 						$('.fetchDataHere').append(`
 							<div class="card overflow-hidden">
 								<div class="d-md-flex">
@@ -319,13 +248,7 @@
 											<img src="../assets/images/media/11.jpg" alt="img" class="cover-image">
 										</div>
 										<div class="item-overly-trans">
-											@if(`+response.data[i].type+` == 1)
-												<a href="/course-details/`+response.data[i].id+`" class="bg-primary">Online</a>
-											@elseif(`+response.data[i].type+` == 2)
-												<a href="/course-details/`+response.data[i].id+`" class="bg-primary">Registered</a>
-											@else
-											<a href="/course-details/`+response.data[i].id+`" class="bg-primary">Headquarter</a>
-											@endif
+											<a href="/course-details/`+response.data[i].id+`" class="bg-primary">`+courseType+`</a>
 										</div>
 									</div>
 									<div class="card border-0 mb-0">

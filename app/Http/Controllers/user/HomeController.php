@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\user;
 
 use App\Http\Controllers\Controller;
+use App\Partner;
 use App\Service;
 use App\Setting;
+use App\Specialist;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 
@@ -23,6 +25,10 @@ class HomeController extends Controller
         Session::put('facebook_linkHeader' , $settings->facebook_link);
         Session::put('twitter_linkHeader' , $settings->twitter_link);
         Session::put('instagram_linkHeader' , $settings->instagram_link);
-        return view('welcome')->with(['settings' => $settings ,'services' => Service::all()]);
+        return view('welcome')->with(['settings' => $settings ,
+            'services' => Service::all() ,
+            'partners' => Partner::all() ,
+
+        ]);
     }
 }

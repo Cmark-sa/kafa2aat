@@ -7,9 +7,9 @@
 
  <section class="sptb" id="about-us">
 	<div class="container">
-		<div class="text-justify">
+		<div class="text-center">
 			<h2 class="mb-4 font-weight-semibold">Why {{$settings->site_name}}?</h2>
-			<h5 class="leading-normal">{{$settings->site_description}}</h5>
+			<h4 class="leading-normal">{{$settings->site_description}}</h4>
 		</div>
 	</div>
  </section>
@@ -24,43 +24,98 @@
             </div>
             <div id="defaultCarousel" class="owl-carousel Card-owlcarousel owl-carousel-icons">
                 @if($services->count() > 0)
+
                 @foreach($services as $service)
-                <div class="item">
-                    <div class="card mb-0">
-                        <div class="item7-card-img">
-                            <a href="#"></a>
-                            <img src="{{$service->image}}" alt="img" class="cover-image">
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="item7-card-desc d-flex mb-2">
-                                <a href="#"><i class="fa fa-calendar-o mr-2"></i>{{date('Y-m-d' , strtotime($service->created_at))}}</a>
-                                <div class="ml-auto">
-                                    <a href="#"><i class="fa fa-comment-o mr-2"></i>0 Comments</a>
+
+                            <div class="card overflow-hidden">
+                                <div class="ribbon ribbon-top-left text-danger"><span class="bg-danger">Free</span></div>
+                                <div class="item-card7-img">
+                                    <div class="item-card7-imgs">
+
+                                        <img src="{{$service->image}}" alt="img" class="cover-image" style="width: 100%;height: 10vw;object-fit: fill;">
+                                    </div>
+                                    <div class="item-card7-overlaytext">
+                                        <a href="education.html" class="text-white"> SERVICE TYPE</a>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="item-card7-desc">
+                                        <div class="item-card7-text">
+                                            <a href="{{url('service/details/'.$service->id)}}" class="text-dark"><h3 class="font-weight-semibold">
+                                                {{$service->title}}</h3></a>
+                                        </div>
+                                        <ul class="d-flex mb-2">
+                                            <li class=""><a href="#" class="icons text-muted"><i class="icon icon-location-pin  mr-1"></i> Saudi Arabia</a></li>
+                                            <li><a href="#" class="icons text-muted"><i class="icon icon-event  mr-1"></i>{{date('m' , strtotime($service->created_at))}} min ago</a></li>
+{{--                                            <li class=""><a href="#" class="icons text-muted"><i class="icon icon-phone  mr-1"></i> 14 675 65</a></li>--}}
+                                        </ul>
+                                        <p class="mb-0">{{\Illuminate\Support\Str::limit($service->description , 200)}}</p>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+                                    <a href="{{url('service/details/'.$service->id)}}" class="btn btn-primary btn-block">More Details</a>
                                 </div>
                             </div>
-                            <a href="{{url('service/details/'.$service->id)}}" class="text-dark"><h3 class="font-weight-semibold">{{$service->title}}</h3></a>
 
-                            <div class="d-flex align-items-center pt-2 mt-auto">
-                                <a href="{{url('/admin/services/delete/'.$service->id)}}" class="btn btn-primary">المزيد من التفاصيل</a>
-{{--                                <img src="../assets/images/users/male/5.jpg" class="avatar brround avatar-md mr-3" alt="avatar-img">--}}
-{{--                                <div>--}}
-{{--                                    <a href="profile.html" class="text-default">Joanne Nash</a>--}}
-{{--                                    <small class="d-block text-muted">1 day ago</small>--}}
-{{--                                </div>--}}
-{{--                                <div class="ml-auto text-muted">--}}
-{{--                                    <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fe fe-heart mr-1"></i></a>--}}
-{{--                                    <a href="javascript:void(0)" class="icon d-none d-md-inline-block ml-3"><i class="fa fa-thumbs-o-up"></i></a>--}}
-{{--                                </div>--}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 @endforeach
                 @else
                <span class="text-warning text-center"> no services provided yet !</span>
                     @endif
             </div>
         </div>
+
     </section><!--/Section-->
+
+    <!--Section-->
+    <section>
+        <div class="cover-image about-widget sptb bg-background-color" data-image-src="../assets/images/banners/banner4.jpg">
+            <div class="content-text mb-0">
+                <div class="container">
+                    <div class="text-center text-white ">
+                        <h2 class="mb-2 font-weight-400">Let's Update Your Skills with Our Training Professionals...</h2>
+                        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                        <div class="mt-5">
+                            <a href="{{route('register')}}" class="btn btn-lg btn-primary">Register Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/Section-->
+
+
+    <hr>
+    @if($partners->count() > 0)
+<section class="partners">
+    <div class="container">
+
+        <h3 class="">Our Partners</h3>
+        <hr>
+
+        <div class="row">
+            @foreach($partners as $partner)
+                <div class="col-xl-4 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="team-section text-center">
+                                <div class="team-img">
+                                    <img src="{{$partner->logo}}" class="img-thumbnail rounded-circle alt=" alt="img" style="height: 5vw;object-fit: cover">
+                                </div>
+                                <h3 class="font-weight-bold dark-grey-text mt-4">{{$partner->company_name}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+    @endif
+
+    <hr>
+
 
 @endcomponent

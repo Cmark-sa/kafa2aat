@@ -11,7 +11,7 @@ class ServiceController extends Controller
 
 
     public function getServiceById($id){
-        $servicesById = Service::find($id);
-        return view('user.services.services-details' , ['servicesById' => $servicesById]);
+        $service = Service::find($id);
+        return view('user.services.service-details')->with(['service' => $service]);
     }
 }
