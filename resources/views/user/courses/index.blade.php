@@ -129,8 +129,6 @@
 			</div>
 		</section><!--Section-->
 
-<<<<<<< HEAD
-=======
 		<!-- Onlinesletter-->
 		<section class="sptb bg-white border-top">
 			<div class="container">
@@ -162,7 +160,6 @@
 		$('#type').on('change' , function(e){
 			type = e.target.value;
 		});
->>>>>>> d75a6417559452aecbcbbd227c716c6f17d027af
 
 		$("#formGet").on('change' , function(e){
 			name = e.target.value;

@@ -11,12 +11,8 @@ class CourseController extends Controller
 {
     public function courses(){
 
-<<<<<<< HEAD
-         return view ('user.courses.index')->with(['courses' =>   Course::all() ,
+         return view ('user.courses.index')->with(['courses' =>   Course::simplePaginate(4) ,
              'specialists' =>Specialist::titlesOnLY()]);
-=======
-         return view ('user.courses.index')->with('courses' ,   Course::simplePaginate(4));
->>>>>>> d75a6417559452aecbcbbd227c716c6f17d027af
     }
 
     public function courseDetails($course_id){
