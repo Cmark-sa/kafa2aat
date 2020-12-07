@@ -12,7 +12,7 @@ class Course extends Model
         'description',
         'code',
         'type',
-        'category',
+        'specialist_id',
         'duration',
         'price',
         'date',
@@ -25,5 +25,9 @@ class Course extends Model
 
     public function onlineCourse(){
         return $this->hasOne('App\OnlineCourses' , 'course_id' , 'id');
+    }
+
+    public function specialist(){
+        return $this->belongsTo('App\Specialist' , 'specialist_id' , 'id');
     }
 }

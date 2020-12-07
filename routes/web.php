@@ -141,4 +141,5 @@ Route::group(['namespace' => 'user'] , function (){
     Route::get('services' , 'ServiceController@services');
     Route::get('service/details/{service_id}' , 'ServiceController@getServiceById');
     Route::get('subscribe' , 'SubscriptionController@subscribe');
+    Route::get('specialist-id/courses/{specialist_id}/{request_type}' , 'CourseController@specialistCourses');
 });
