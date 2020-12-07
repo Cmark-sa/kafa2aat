@@ -43,10 +43,7 @@ class CourseController extends Controller
     public function specialistCourses($specialist_id, $req_type)
     {
 
-//        if (!Session::has('specialist_ids')){
-//
-//            Session::put('specialist_ids' , []);
-//        }
+
         if ($req_type == 1) {
 
             Session::push('specialist_ids', $specialist_id);

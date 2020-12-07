@@ -35,9 +35,7 @@
                     </div>
 									<div class="tab-content">
 										<div class="tab-pane active fetchDataHere" id="tab-11">
-<<<<<<< HEAD
 
-=======
 										@foreach($courses as $course)
 										<div class="card overflow-hidden">
 											<div class="d-md-flex">
@@ -78,7 +76,6 @@
 										</div>
 										@endforeach
 										{{$courses->links()}}
->>>>>>> 7078176e93b45a4c76108ebab8756b5c1874389e
 										</div>
 									</div>
 								</div>
@@ -140,7 +137,7 @@
                 console.log(response.data);
 				if(response.data != ""){
 					var courseType="";
-					
+
 					for(var i = 0 ; i < response.data.length ; i++){
 						if(response.data[i].type == 1){
 							courseType = 'Online'
