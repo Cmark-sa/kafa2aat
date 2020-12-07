@@ -10,13 +10,10 @@ use Illuminate\Support\Facades\Session;
 
 class CourseController extends Controller
 {
+    public function courses(){
 
-    public function courses()
-    {
-
-        return view('user.courses.index')->with(['courses' => Course::all(),
-            'specialists' => Specialist::titlesOnLY()]);
-        return view('user.courses.index')->with('courses', Course::simplePaginate(4));
+         return view ('user.courses.index')->with(['courses' =>   Course::simplePaginate(4) ,
+             'specialists' =>Specialist::titlesOnLY()]);
     }
 
     public function courseDetails($course_id)
