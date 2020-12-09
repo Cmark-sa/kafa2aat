@@ -11124,7 +11124,7 @@ div.online-status .status.online {
 	-ms-flex-pack: center;
 	justify-content: center;
 	border-right: 1px solid #e0e8f3;
-	border-bottom: 1px solid #e0e8f3;	
+	border-bottom: 1px solid #e0e8f3;
 }
 .icons-list-item i {
 	font-size: 1.25rem;
@@ -19867,7 +19867,7 @@ a.typewrite {
 	padding: 15px 40px;
 	margin: 0 0 20px 0;
 	background: rgba(233, 30, 99, .1);
-	font-size: 20px;	
+	font-size: 20px;
 	text-transform: capitalize;
 	letter-spacing: 1px;
 	position: relative;
@@ -19907,7 +19907,7 @@ a.typewrite {
 	padding: 7px 30px;
 	background: rgba(233, 30, 99, .1);
 	font-size: 17px;
-	font-weight: 700;	
+	font-weight: 700;
 	text-transform: uppercase;
 	position: relative;
 	transition: all .3s ease 0s;
@@ -20189,7 +20189,7 @@ body .modal-open {
 }
 .modal.fade.show {
 	padding-right: 0 !important;
-	
+
 }
 .info .counter-icon {
 	border: 1px solid rgba(255, 255, 255, 0.03) !important;
@@ -20454,7 +20454,7 @@ body .modal-open {
 .pricingTable.advance-pricing {
 	border: 1px solid rgb(255, 56, 43);
 }
-.item-card7-overlaytext h4 {	
+.item-card7-overlaytext h4 {
 	background: #f84242;
 }
 .header-white{
@@ -20553,7 +20553,7 @@ i.car {
 		left: 60px;
 		width: 60%;
 		box-shadow: 0 0 0 0 rgba(8, 12, 35, 0.33), 0 4px 16px 0 rgba(4, 17, 31, 0.47);
-	
+
 	}
 }
 @media (max-width:991px){
@@ -20625,7 +20625,7 @@ i.car {
 	color:#fff !important;
 	cursor:pointer;
 }
-.service-widgets:hover .text-muted{ 
+.service-widgets:hover .text-muted{
 	color:#fff !important;
 }
 .service-widgets:hover .text-primary, .service-widgets:hover  .text-secondary, .service-widgets:hover  .text-success,  .service-widgets:hover  .text-warning{
@@ -20726,7 +20726,7 @@ i.car {
 .bannner-owl-carousel1 .owl-nav button{
 	border: 1px solid transparent !important;
     background: rgba(0,0,0,0.1)!important;
-	border-radius:3px !important; 
+	border-radius:3px !important;
 }
 .bannner-owl-carousel1.owl-carousel:hover .owl-nav button{
 	background: rgba(0,0,0,0.3)!important;
@@ -20989,5 +20989,7 @@ item-card2-footer a.btn{
 	.footer.footer-style{
 		margin-left:0px  !important;
 	}
-	
+
 }
+
+

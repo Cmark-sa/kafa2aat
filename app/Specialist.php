@@ -15,7 +15,7 @@ class Specialist extends Model
     }
 
     public function scopeTitlesOnLY($query){
-        return $query->select(['id','title'])->get();
+        return $query->select(['specialists.id','specialists.title'])->get();
     }
 
     public function courses(){

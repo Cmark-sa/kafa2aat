@@ -13,7 +13,7 @@ class CourseController extends Controller
     public function courses(){
 
          return view ('user.courses.index')->with(['courses' =>   Course::simplePaginate(4) ,
-             'specialists' =>Specialist::titlesOnLY()]);
+             'specialists' =>Specialist::join('courses' , 'specialists.id' , 'courses.specialist_id')->distinct()->titlesOnLY()]);
     }
 
     public function courseDetails($course_id)
@@ -66,6 +66,8 @@ class CourseController extends Controller
         $coursesAjax = Course::simplePaginate(15);
         return response()->json($coursesAjax);
     }
+
+
 }
 
 

@@ -164,11 +164,13 @@
 function getCoursesBySpecialistId(id){
     var checkInput = $('#spec_id_input-'+id);
 
-    if (checkInput.is(':checked')){
-         ajaxRequestWizard(id,1);
-    }else{
-         ajaxRequestWizard(id,0);
-    }
+       if (checkInput.is(':checked')){
+           ajaxRequestWizard(id,1);
+       }else{
+           ajaxRequestWizard(id,0);
+       }
+
+
 
 }
 
@@ -228,9 +230,7 @@ function ajaxRequestWizard(id,request_type){
         					`);
                 }
             }else{
-                $('.fetchDataHere').append(`
-         		            <div class="text-center text-danger"><h3>no courses found !</h3></div>
-         		        `);
+               getAllCourses();
             }
         },
         error:function (exception){
@@ -238,3 +238,84 @@ function ajaxRequestWizard(id,request_type){
         }
     })
 }
+
+function getAllCourses(){
+    $.ajax({
+        url:'/getAllCourseAjax',
+        method:'GET',
+        success:function(response){
+            console.log(response.data);
+            if(response.data != ""){
+                var courseType="";
+                $('.fetchDataHere').empty();
+                for(var i = 0 ; i < response.data.length ; i++){
+                    if(response.data[i].type == 1){
+                        courseType = 'Online'
+                    }else if(response.data[i].type == 2){
+                        courseType = 'Registered'
+                    }else{
+                        courseType = 'Headquarter'
+                    }
+                    $('.fetchDataHere').append(`
+							<div class="card overflow-hidden">
+								<div class="d-md-flex">
+									<div class="item-card9-img">
+										<div class="item-card9-imgs">
+											<a href="/course-details/`+response.data[i].id+`"></a>
+											<img src="../assets/images/media/11.jpg" alt="img" class="cover-image">
+										</div>
+										<div class="item-overly-trans">
+											<a href="/course-details/`+response.data[i].id+`" class="bg-primary">`+courseType+`</a>
+										</div>
+									</div>
+									<div class="card border-0 mb-0">
+										<div class="card-body ">
+											<div class="item-card9">
+												<a href="/course-details/`+response.data[i].id+`" class="text-dark"><h3 class="font-weight-semibold mt-1">`+response.data[i].title+`</h3></a>
+													<div class="mt-2 mb-2">
+													<a href="#" class="mr-4"><span class="text-muted fs-13"><i class="fa fa-clock-o text-muted mr-1"></i>`+response.data[i].date+`</span></a>
+												</div>
+												<p class="mb-0 leading-tight">`+response.data[i].description+`</p>
+											</div>
+										</div>
+										<div class="card-footer pt-4 pb-4">
+											<div class="item-card9-footer d-flex">
+												<div class="item-card9-cost">
+													<h4 class="text-dark font-weight-semibold mb-0 mt-0">`+response.data[i].price+`</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						`);
+                }
+            }else{
+                $('.fetchDataHere').append(`
+    		            <div class="text-center text-danger">لا توجد بيانات</div>
+    		        `);
+            }
+        }
+    });
+}
+
+setTimeout(function() {
+    $('.toaster-div').fadeOut('fast');
+}, 2000);
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            $('#image_render').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]); // convert to base64 string
+    }
+}
+
+$(".custom-file-input").change(function() {
+    $('.image_render_div').css('display' , 'block');
+    readURL(this);
+});
