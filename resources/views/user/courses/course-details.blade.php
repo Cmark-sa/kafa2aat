@@ -55,7 +55,7 @@
 							</div>
 							<div class="card-footer">
 								<div class="icons">
-									<a href="#" class="btn btn-primary mb-3 mb-xl-0"><i class="fe fe-credit-card mr-1"></i>Buy This Course</a>
+									<a href="/showPageEnroll/{{$course->id}}" class="btn btn-primary mb-3 mb-xl-0"><i class="fe fe-credit-card mr-1"></i>Buy This Course</a>
 								</div>
 							</div>
 						</div>
@@ -72,9 +72,8 @@
 									<p class="text-danger"><i class="fe fe-clock mr-1"></i>5 days to left of this Price</p>
 								</div>
 								<div class="">
-									<a href="#" class="btn btn-primary btn-lg btn-block">Buy Now</a>
+									<a href="/showPageEnroll/{{$course->id}}" class="btn btn-primary btn-lg btn-block">Enroll Now</a>
 									<a href="#" class="btn btn-secondary btn-lg btn-block">Coursed to Cart</a>
-									<a href="#" class="btn btn-info btn-lg btn-block">Trail Now</a>
 								</div>
 							</div>
 						</div>

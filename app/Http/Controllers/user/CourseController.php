@@ -3,10 +3,14 @@
 namespace App\Http\Controllers\user;
 
 use App\Course;
+use App\User;
+use App\StudentCourse;
+use App\Student;
 use App\Http\Controllers\Controller;
 use App\Specialist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use DB;
 
 class CourseController extends Controller
 {
@@ -68,6 +72,56 @@ class CourseController extends Controller
     {
         $coursesAjax = Course::simplePaginate(15);
         return response()->json($coursesAjax);
+    }
+
+    function showPageEnrollCourse($id){
+        $course = Course::find($id);
+        return view('user.courses.enroll' , ['course' => $course]);
+    }
+
+    function storeStudentCourse(Request $request){
+
+        DB::transaction(function () use ($request) {
+    
+            $this->validate($request, [
+               'username' => 'required',
+               'email' => 'required',
+               'phone' => 'required',
+               'national_id' => 'required',
+               'nationality' => 'required',
+               'address' => 'required',
+               'city' => 'required'
+           ]);
+
+            $user = new User();
+            $user->username = $request->input('username');
+            $user->email = $request->input('email');
+            $user->phone = $request->input('phone');
+            if($user->photo != null){
+                $returned_image = $this->ImageUploader($request->photo , 'uploads/user/images');
+                $request->photo = $returned_image;
+            }
+            $user->type = 0;
+            $user->save();
+
+            $student = new Student();
+            $student->address = $request->input('address');
+            $student->city = $request->input('city');
+            $student->national_id = $request->input('national_id');
+            $student->nationality = $request->input('nationality');
+            $student->interests = $request->input('interests');
+
+            $student->user_id = $user->id;
+            $student->save();
+
+            $student_course = new StudentCourse();
+            $student_course->user_id = $user->id;
+            $student_course->course_id = $request->input('course_id');
+
+            $student_course->save();
+
+        });
+        return back();
     }
 }
 
