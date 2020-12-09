@@ -133,6 +133,8 @@ Route::group(['namespace' => 'user'] , function (){
     Route::get('course-details/{course_id}' , 'CourseController@courseDetails');
     Route::get('/getDataCourse' , 'CourseController@getDataOfCourse');
     Route::get('/getAllCourseAjax' , 'CourseController@getAllCoursesAjax');
+    Route::get('/showPageEnroll/{id}' , 'CourseController@showPageEnrollCourse');
+    Route::post('/storeCourseStudent' , 'CourseController@storeStudentCourse')->name('storeCourseStd');
     Route::get('/', 'HomeController@index');
     Route::get('business-areas' , 'BusinessAreaController@index');
     Route::get('achievements' , 'AchievementController@index');

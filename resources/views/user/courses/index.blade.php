@@ -117,8 +117,12 @@
 				</div>
 			</div>
 		</section><!--Section-->
+<<<<<<< HEAD
 
 
+=======
+		
+>>>>>>> 504bb07fededf4e2dc597346860c89415160ed78
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 <script>
