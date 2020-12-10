@@ -3,17 +3,20 @@
 namespace App\Http\Controllers\user;
 
 use App\Course;
+use App\Traits\ImageUploaderTrait;
 use App\User;
 use App\StudentCourse;
 use App\Student;
 use App\Http\Controllers\Controller;
 use App\Specialist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use DB;
 
 class CourseController extends Controller
 {
+    use ImageUploaderTrait;
     public function courses(){
 
          return view ('user.courses.index')->with(['courses' =>   Course::simplePaginate(4) ,
@@ -71,9 +74,7 @@ class CourseController extends Controller
         return response()->json($coursesAjax);
     }
 
-<<<<<<< HEAD
 
-=======
     function showPageEnrollCourse($id){
         $course = Course::find($id);
         return view('user.courses.enroll' , ['course' => $course]);
@@ -81,8 +82,10 @@ class CourseController extends Controller
 
     function storeStudentCourse(Request $request){
 
+
+
         DB::transaction(function () use ($request) {
-    
+
             $this->validate($request, [
                'username' => 'required',
                'email' => 'required',
@@ -97,9 +100,10 @@ class CourseController extends Controller
             $user->username = $request->input('username');
             $user->email = $request->input('email');
             $user->phone = $request->input('phone');
+
             if($user->photo != null){
-                $returned_image = $this->ImageUploader($request->photo , 'uploads/user/images');
-                $request->photo = $returned_image;
+                $user->photo  = $this->ImageUploader($request->photo , 'uploads/user/images');
+
             }
             $user->type = 0;
             $user->save();
@@ -123,7 +127,12 @@ class CourseController extends Controller
         });
         return back();
     }
->>>>>>> 504bb07fededf4e2dc597346860c89415160ed78
+
+    public function myCourses(){
+
+        return view('user.profile.mycourses')->with([StudentCourse::where('user_id' , Auth::user()->id)->get()]);
+
+    }
 }
 
 

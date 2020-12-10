@@ -30,4 +30,8 @@ class Course extends Model
     public function specialist(){
         return $this->belongsTo('App\Specialist' , 'specialist_id' , 'id');
     }
+
+    public function studentCourses(){
+        return $this->hasMany('App\StudentCourse');
+    }
 }
