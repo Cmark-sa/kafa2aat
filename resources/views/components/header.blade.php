@@ -25,27 +25,35 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-sm-8 col-5">
-                        @auth
-                        <li class="dropdown top-bar-right">
-                            <a href="#" class="text-dark" data-toggle="dropdown"><i class="fa fa-home mr-1"></i><span> Logout<i class="fa fa-caret-down text-white ml-1"></i></span></a>
-                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                <a class="dropdown-item" href="/logout">
-                                    <i class="dropdown-icon icon icon-power"></i> Log out
-                                </a>
-                            </div>
-                        </li>
-                        @else
-                            <div class="top-bar-right">
-                                <ul class="custom">
+                        <li class="top-bar-right">
+                            <ul class="custom">
+                                @auth
+
+                                    <a href="#" class="text-dark" data-toggle="dropdown"><i class="fa fa-home mr-1"></i><span> {{auth()->user()->username}}<i class="fa fa-caret-down text-white ml-1"></i></span></a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                        <a class="dropdown-item" href="{{url('/profile')}}">
+                                            <i class="dropdown-icon icon icon-user"></i> MyProfile
+                                        </a>
+                                        <a class="dropdown-item" href="/logout">
+
+                                            <i class="dropdown-icon icon icon-power"></i> Log out
+                                        </a>
+                                    </div>
+                                    </li>
+                                @else
+
+
                                     <li>
                                         <a href="{{route('register')}}" class="text-dark"><i class="fa fa-user mr-1"></i> <span>Register</span></a>
                                     </li>
                                     <li>
                                         <a href="{{route('login')}}" class="text-dark"><i class="fa fa-sign-in mr-1"></i> <span>Login</span></a>
                                     </li>
-                                </ul>
-                            </div>
-                        @endauth
+
+
+                                @endauth
+                            </ul>
+                        </li>
                     </div>
                 </div>
             </div>

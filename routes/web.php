@@ -22,7 +22,7 @@ Route::get('/logout' , function(){
     return redirect('/login');
 })->name('user.logout');
 
-Route::group(['prefix'=>'admin' , 'namespace' => 'admin'] ,function () {
+Route::group(['middleware' =>'admin-auth' ,'prefix'=>'admin' , 'namespace' => 'admin'] ,function () {
 
 //Achievements CRUD System
 Route::get('/achievements' , 'AchievementController@index')->name('achievements.index');
@@ -144,4 +144,10 @@ Route::group(['namespace' => 'user'] , function (){
     Route::get('service/details/{service_id}' , 'ServiceController@getServiceById');
     Route::get('subscribe' , 'SubscriptionController@subscribe');
     Route::get('specialist-id/courses/{specialist_id}/{request_type}' , 'CourseController@specialistCourses');
+    Route::group(['middleware' => 'auth'] , function (){
+//        Route::get('course-enroll' , 'CourseController@courseEnrollment')->name('course-enroll');
+        Route::get('add-to-cart' , 'CartController@pushToCart')->name('add-to-cart');
+        Route::get('profile' , 'ProfileController@profile');
+        Route::post('profile/update' , 'ProfileController@updateUserInfo')->name('update-user-info');
+    });
 });

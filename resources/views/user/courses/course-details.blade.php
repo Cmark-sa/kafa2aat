@@ -67,13 +67,19 @@
 							<div class="card-body">
 								<div class="mb-5">
 									<div class="text-dark mb-2"><span class="text-dark font-weight-semibold h1">{{$course->price}} SAD</span>
-										
+
 									</div>
 									<p class="text-danger"><i class="fe fe-clock mr-1"></i>5 days to left of this Price</p>
 								</div>
 								<div class="">
+<<<<<<< HEAD
+									<a href="{{route('course-enroll')}}" class="btn btn-info btn-lg btn-block">Enroll Now</a>
+									<a href="{{route('add-to-cart')}}" class="btn btn-secondary btn-lg btn-block">Coursed to Cart</a>
+{{--									<a href="#" class="btn btn-info btn-lg btn-block">Trail Now</a>--}}
+=======
 									<a href="/showPageEnroll/{{$course->id}}" class="btn btn-primary btn-lg btn-block">Enroll Now</a>
 									<a href="#" class="btn btn-secondary btn-lg btn-block">Coursed to Cart</a>
+>>>>>>> 504bb07fededf4e2dc597346860c89415160ed78
 								</div>
 							</div>
 						</div>

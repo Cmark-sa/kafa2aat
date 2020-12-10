@@ -48,16 +48,19 @@
     <link  href="{{url('assets/switcher/css/switcher.css')}}" rel="stylesheet" id="switcher-css" type="text/css" media="all"/>
 
     <!-- Color Skin css -->
-    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{url('assets/color-skins/color8.css')}}" />
+    <link id="theme" rel="stylesheet" type="text/css" media="all" href="{{url('assets/color-skins/color6.css')}}" />
+
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js"></script>
 
 </head>
 
 <body>
 
-<!--Loader-->
-<div id="global-loader">
-    <img src="{{url('/assets/images/loader.svg')}}" class="loader-img" alt="img">
-</div><!--/Loader-->
+{{--<!--Loader-->--}}
+{{--<div id="global-loader">--}}
+{{--    <img src="{{url('/assets/images/loader.svg')}}" class="loader-img" alt="img">--}}
+{{--</div><!--/Loader-->--}}
 {{--<!--Loader-->--}}
 {{--<div id="global-loader">--}}
 {{--    <img src="{{url('assets/images/loader.svg" class="loader-img" alt="img">--}}

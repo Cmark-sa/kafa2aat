@@ -41,6 +41,11 @@ return [
             'provider' => 'users',
         ],
 
+        'admin-auth' =>[
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
         'api' => [
             'driver' => 'token',
             'provider' => 'users',

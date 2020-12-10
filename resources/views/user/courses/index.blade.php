@@ -16,10 +16,10 @@
 							<form method="GET" id="formGet">
                                 <div class="form row no-gutters ">
 
-                                    <div class="form-group  col-xl-4 col-lg-3 col-md-12 mb-0 bg-white ">
+                                    <div class="form-group  col-xl-6 col-lg-6 col-md-12 mb-0 bg-white ">
                                         <input type="text" name="search" class="form-control input-lg br-tr-md-0 br-br-md-0" id="search" placeholder="Search Courses.....">
                                     </div>
-                                    <div class="form-group  col-xl-3 col-lg-3 col-md-12 mb-0 bg-white">
+                                    <div class="form-group  col-xl-6 col-lg-6 col-md-12 mb-0 bg-white">
                                         <select name="type" id="type" class="form-control select2-show-search  border-bottom-0" data-placeholder="Select Category">
                                                 <option selected disabled>Select Course Type</option>
                                                  <option value="1">Online</option>
@@ -117,6 +117,8 @@
 				</div>
 			</div>
 		</section><!--Section-->
+
+
 		
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
@@ -137,7 +139,7 @@
                 console.log(response.data);
 				if(response.data != ""){
 					var courseType="";
-					
+
 					for(var i = 0 ; i < response.data.length ; i++){
 						if(response.data[i].type == 1){
 							courseType = 'Online'
@@ -187,63 +189,7 @@
 				}
             });
 		}else{
-			$.ajax({
-				url:'/getAllCourseAjax',
-				method:'GET',
-				success:function(response){
-					console.log(response.data);
-					if(response.data != ""){
-						var courseType="";
-						$('.fetchDataHere').empty();
-					for(var i = 0 ; i < response.data.length ; i++){
-						if(response.data[i].type == 1){
-							courseType = 'Online'
-						}else if(response.data[i].type == 2){
-							courseType = 'Registered'
-						}else{
-							courseType = 'Headquarter'
-						}
-						$('.fetchDataHere').append(`
-							<div class="card overflow-hidden">
-								<div class="d-md-flex">
-									<div class="item-card9-img">
-										<div class="item-card9-imgs">
-											<a href="/course-details/`+response.data[i].id+`"></a>
-											<img src="../assets/images/media/11.jpg" alt="img" class="cover-image">
-										</div>
-										<div class="item-overly-trans">
-											<a href="/course-details/`+response.data[i].id+`" class="bg-primary">`+courseType+`</a>
-										</div>
-									</div>
-									<div class="card border-0 mb-0">
-										<div class="card-body ">
-											<div class="item-card9">
-												<a href="/course-details/`+response.data[i].id+`" class="text-dark"><h3 class="font-weight-semibold mt-1">`+response.data[i].title+`</h3></a>
-													<div class="mt-2 mb-2">
-													<a href="#" class="mr-4"><span class="text-muted fs-13"><i class="fa fa-clock-o text-muted mr-1"></i>`+response.data[i].date+`</span></a>
-												</div>
-												<p class="mb-0 leading-tight">`+response.data[i].description+`</p>
-											</div>
-										</div>
-										<div class="card-footer pt-4 pb-4">
-											<div class="item-card9-footer d-flex">
-												<div class="item-card9-cost">
-													<h4 class="text-dark font-weight-semibold mb-0 mt-0">`+response.data[i].price+`</h4>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						`);
-					}
-				}else{
-					$('.fetchDataHere').append(`
-    		            <div class="text-center text-danger">لا توجد بيانات</div>
-    		        `);
-				}
-				}
-			});
+			    getAllCourses();
 		}
         });
 	});

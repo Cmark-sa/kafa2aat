@@ -18,7 +18,7 @@ class CourseController extends Controller
     public function courses(){
 
          return view ('user.courses.index')->with(['courses' =>   Course::simplePaginate(4) ,
-             'specialists' =>Specialist::titlesOnLY()]);
+             'specialists' =>Specialist::join('courses' , 'specialists.id' , 'courses.specialist_id')->distinct()->titlesOnLY()]);
     }
 
     public function courseDetails($course_id)
@@ -45,10 +45,7 @@ class CourseController extends Controller
     public function specialistCourses($specialist_id, $req_type)
     {
 
-//        if (!Session::has('specialist_ids')){
-//
-//            Session::put('specialist_ids' , []);
-//        }
+
         if ($req_type == 1) {
 
             Session::push('specialist_ids', $specialist_id);
@@ -75,6 +72,9 @@ class CourseController extends Controller
         return response()->json($coursesAjax);
     }
 
+<<<<<<< HEAD
+
+=======
     function showPageEnrollCourse($id){
         $course = Course::find($id);
         return view('user.courses.enroll' , ['course' => $course]);
@@ -132,6 +132,7 @@ class CourseController extends Controller
         });
         return back();
     }
+>>>>>>> 504bb07fededf4e2dc597346860c89415160ed78
 }
 
 
