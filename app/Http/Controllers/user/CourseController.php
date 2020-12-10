@@ -11,6 +11,7 @@ use App\Specialist;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use DB;
+use Auth;
 
 class CourseController extends Controller
 {
@@ -83,23 +84,30 @@ class CourseController extends Controller
 
         DB::transaction(function () use ($request) {
     
-            $this->validate($request, [
-               'username' => 'required',
-               'email' => 'required',
-               'phone' => 'required',
-               'national_id' => 'required',
-               'nationality' => 'required',
-               'address' => 'required',
-               'city' => 'required'
-           ]);
+        //     $this->validate($request, [
+        //        'username' => 'required',
+        //        'email' => 'required|unique:users',
+        //        'phone' => 'required|unique:users',
+        //        'national_id' => 'required|unique:students',
+        //        'nationality' => 'required',
+        //        'address' => 'required',
+        //        'city' => 'required'
+        //    ]);
+
+            if(Auth::check()){
+                $student_course = new StudentCourse();
+                $student_course->user_id = Auth::user()->id;
+                $student_course->course_id = $request->input('course_id');
+                $student_course->save();
+
+            }else{
 
             $user = new User();
             $user->username = $request->input('username');
             $user->email = $request->input('email');
             $user->phone = $request->input('phone');
             if($user->photo != null){
-                $returned_image = $this->ImageUploader($request->photo , 'uploads/user/images');
-                $request->photo = $returned_image;
+                $user->photo = $this->ImageUploader($request->photo , 'uploads/user/images');
             }
             $user->type = 0;
             $user->save();
@@ -119,6 +127,7 @@ class CourseController extends Controller
             $student_course->course_id = $request->input('course_id');
 
             $student_course->save();
+        }
 
         });
         return back();
