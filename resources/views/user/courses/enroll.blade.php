@@ -265,7 +265,7 @@
 		</section><!--/Section-->
 		@endguest
 		@auth
-		<div style="display:flex">
+		<div style="display:inline-flex">
 			<div class="col-xl-8">
 				<div class="card mb-xl-0">
 					<div class="card-header">

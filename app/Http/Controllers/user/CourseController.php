@@ -72,9 +72,7 @@ class CourseController extends Controller
         return response()->json($coursesAjax);
     }
 
-<<<<<<< HEAD
 
-=======
     function showPageEnrollCourse($id){
         $course = Course::find($id);
         return view('user.courses.enroll' , ['course' => $course]);
@@ -132,7 +130,6 @@ class CourseController extends Controller
         });
         return back();
     }
->>>>>>> 504bb07fededf4e2dc597346860c89415160ed78
 }
 
 
