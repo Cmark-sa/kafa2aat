@@ -3,18 +3,21 @@
 namespace App\Http\Controllers\user;
 
 use App\Course;
+use App\Traits\ImageUploaderTrait;
 use App\User;
 use App\StudentCourse;
 use App\Student;
 use App\Http\Controllers\Controller;
 use App\Specialist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use DB;
 use Auth;
 
 class CourseController extends Controller
 {
+    use ImageUploaderTrait;
     public function courses(){
 
          return view ('user.courses.index')->with(['courses' =>   Course::simplePaginate(4) ,
@@ -80,17 +83,20 @@ class CourseController extends Controller
 
     function storeStudentCourse(Request $request){
 
+
+
         DB::transaction(function () use ($request) {
-    
+
         //     $this->validate($request, [
         //        'username' => 'required',
-        //        'email' => 'required|unique:users',
-        //        'phone' => 'required|unique:users',
-        //        'national_id' => 'required|unique:students',
+        //        'email' => 'required',
+        //        'phone' => 'required',
+        //        'national_id' => 'required',
         //        'nationality' => 'required',
         //        'address' => 'required',
         //        'city' => 'required'
         //    ]);
+
 
             if(Auth::check()){
                 $student_course = new StudentCourse();
@@ -104,8 +110,9 @@ class CourseController extends Controller
             $user->username = $request->input('username');
             $user->email = $request->input('email');
             $user->phone = $request->input('phone');
+
             if($user->photo != null){
-                $user->photo = $this->ImageUploader($request->photo , 'uploads/user/images');
+                $user->photo  = $this->ImageUploader($request->photo , 'uploads/user/images');
             }
             $user->type = 0;
             $user->save();
@@ -129,6 +136,12 @@ class CourseController extends Controller
 
         });
         return back();
+    }
+
+    public function myCourses(){
+
+        return view('user.profile.mycourses')->with([StudentCourse::where('user_id' , Auth::user()->id)->get()]);
+
     }
 }
 

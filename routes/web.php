@@ -149,5 +149,6 @@ Route::group(['namespace' => 'user'] , function (){
         Route::get('add-to-cart' , 'CartController@pushToCart')->name('add-to-cart');
         Route::get('profile' , 'ProfileController@profile');
         Route::post('profile/update' , 'ProfileController@updateUserInfo')->name('update-user-info');
+        Route::get('my-courses' , 'CourseController@myCourses');
     });
 });

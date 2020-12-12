@@ -119,7 +119,11 @@
 		</section><!--Section-->
 
 
+<<<<<<< HEAD
+
+=======
 		
+>>>>>>> c5012e0c33e51320a749d8d8d1f500461f27140a
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
 <script>
